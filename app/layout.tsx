@@ -2,6 +2,7 @@ import type React from "react"
 import type { Metadata } from "next"
 import { GeistSans } from "geist/font/sans"
 import { GeistMono } from "geist/font/mono"
+import Script from "next/script"
 import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
 
@@ -15,9 +16,11 @@ export const metadata: Metadata = {
   description:
     "Professional physics coaching academy for students from beginner to advanced levels with expert faculty and online/offline classes.",
   generator: "v0.app",
+
   verification: {
     google: "QYUm0yBJfsoy9OOV0OkQguoz_ME6vAHST6CPIVaV9ZU",
   },
+
   icons: {
     apple: "/apple-touch-icon.png",
     icon: [
@@ -33,6 +36,7 @@ export const metadata: Metadata = {
       },
     ],
   },
+
   manifest: "/site.webmanifest",
 }
 
@@ -44,6 +48,23 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-BWB30G2N9V"
+          strategy="afterInteractive"
+        />
+
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-BWB30G2N9V');
+          `}
+        </Script>
+
+        {/* Structured Data */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -56,6 +77,7 @@ export default function RootLayout({
             }),
           }}
         />
+
         <meta
           name="relatedAcademy"
           content="https://thegeniuschessacademy.com"
@@ -72,6 +94,7 @@ export default function RootLayout({
         </Suspense>
 
         <Footer />
+
         <Analytics />
       </body>
     </html>
