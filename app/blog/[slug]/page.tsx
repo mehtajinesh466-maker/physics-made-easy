@@ -11,7 +11,8 @@ import {
   User,
   Tag
 } from "lucide-react";
-import { Metadata } from "next";
+import type { Metadata } from "next";
+import { buildBlogPostMetadata } from "@/lib/seo";
 
 interface Props {
   params: {
@@ -19,20 +20,18 @@ interface Props {
   };
 }
 
-// --- Dynamic SEO Optimization ---
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const posts = await getBlogPosts();
-  const post = posts.find((p: any) => p.slug === params.slug);
+  const post = posts.find((p: { slug: string }) => p.slug === params.slug);
 
   if (!post) return { title: "Post Not Found" };
 
-  return {
-    title: `${post.title} | Physics Made Easy`,
-    description: post.excerpt || `Learn more about ${post.title} with Cornelius Chew.`,
-    openGraph: {
-      images: [post.image],
-    },
-  };
+  return buildBlogPostMetadata({
+    title: post.title,
+    excerpt: post.excerpt,
+    slug: post.slug,
+    image: post.image,
+  });
 }
 
 export default async function BlogDetailPage({ params }: Props) {

@@ -1,4 +1,7 @@
+import { buildMetadata } from "@/lib/seo";
 import AchievementsBanner from "@/components/ui/AchievementsBanner";
+
+export const metadata = buildMetadata("/achievements");
 import AchievementsSection from "@/components/ui/AchievementsSection";
 export default function AchievementsPage() {
   return (

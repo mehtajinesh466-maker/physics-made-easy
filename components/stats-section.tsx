@@ -11,45 +11,12 @@ import {
   ChevronDown
 } from "lucide-react";
 
-// --- FAQ Data (Specific to Physics Made Easy) ---
-const faqData = [
-  {
-    id: 1,
-    question: "What makes 'Physics Made Easy' different from other tuition centers?",
-    answer:
-      "We use the Multiple Intelligences (MI) theory to teach. Led by Mr. Chew (Ex-MOE Scholar & FIDE Instructor), we combine academic rigor with Chess strategy. This helps students not just memorize formulas, but develop the critical thinking skills needed to solve complex exam problems.",
-  },
-  {
-    id: 2,
-    question: "Which levels and boards do you cover?",
-    answer:
-      "We specialize in Physics for GCE O-Levels, A-Levels (H1/H2), IB (HL/SL), IP, and IGCSE. We also offer lower secondary science coaching to build a strong foundation early on.",
-  },
-  {
-    id: 3,
-    question: "Where are classes held? Do you offer online lessons?",
-    answer:
-      "Physical classes are held at our center in Toa Payoh Central (Lobby H). Yes, we also offer high-quality online lessons for students who prefer learning from home or are based overseas.",
-  },
-  {
-    id: 4,
-    question: "How does Chess help with Physics?",
-    answer:
-      "Chess teaches pattern recognition, foresight, and disciplined calculation—skills directly transferable to Physics problem-solving. It trains the brain to think continuously and logically, which is crucial for tackling high-level exam questions.",
-  },
-  {
-    id: 5,
-    question: "What is your track record for student results?",
-    answer:
-      "We have a proven history of excellence: 95% of our O-Level students have scored A/B grades, and 95% of our IB HL Physics students achieved Grade 7. We focus on turning improvements into consistency.",
-  },
-  {
-    id: 6,
-    question: "Do you offer trial classes?",
-    answer:
-      "Yes! We believe in the right fit. You can book a paid trial lesson to experience our teaching style firsthand before committing to a term package. Contact us via WhatsApp to schedule.",
-  },
-];
+import { HOME_FAQS } from "@/config/seo-config";
+
+const faqData = HOME_FAQS.map((faq, index) => ({
+  id: index + 1,
+  ...faq,
+}));
 
 export default function FaqSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);

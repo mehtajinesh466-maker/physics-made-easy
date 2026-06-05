@@ -1,4 +1,7 @@
 import AdminSidebar from "@/components/admin/AdminSidebar";
+import { buildMetadata } from "@/lib/seo";
+
+export const metadata = buildMetadata("/admin");
 
 export default function AdminLayout({
   children,

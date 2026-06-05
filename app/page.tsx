@@ -1,3 +1,4 @@
+import { getFAQSchema, HOME_FAQS } from "@/config/seo-config"
 import  HeroSection  from "@/components/hero-section"
 import  CoursesSection  from "@/components/events-preview"
 import  DemoBookingCTA  from "@/components/demo-booking-cta"
@@ -21,6 +22,12 @@ import PeterLohMentorProfile from "@/components/advisor"
 export default function HomePage() {
   return (
     <div className="min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(getFAQSchema(HOME_FAQS)),
+        }}
+      />
       <main>
         <HeroSection />
         <WhyChooseUsSection/>

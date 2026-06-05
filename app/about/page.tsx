@@ -1,4 +1,7 @@
+import { buildMetadata } from "@/lib/seo";
 import AboutBanner from "@/components/ui/AboutBanner";
+
+export const metadata = buildMetadata("/about");
 import AboutSection from "@/components/ui/AboutSection";
 import FaqSection from "@/components/stats-section";
 import CoachCtaSection from "@/components/ui/CoachCtaSection";
