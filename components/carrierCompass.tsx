@@ -157,7 +157,7 @@ Hi Mr. Chew, I'd like to discuss my personalized career roadmap based on these r
       
       {/* --- Hidden SEO Content for Bots --- */}
       <div className="sr-only">
-        <h1>{SEO_METADATA.title}</h1>
+        <h2>{SEO_METADATA.title}</h2>
         <p>{SEO_METADATA.description}</p>
         <h2>Advanced STEM Career Mapping for Singapore Students</h2>
       </div>
