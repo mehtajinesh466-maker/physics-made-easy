@@ -101,10 +101,10 @@ export default function PeterLohMentorProfile() {
 
             {/* Main Headline */}
             <motion.div variants={itemVariants} className="space-y-4">
-              <h1 className="text-4xl sm:text-5xl md:text-6xl xl:text-6xl leading-[1.05] font-black text-slate-900 tracking-tight">
+              <h2 className="text-4xl sm:text-5xl md:text-6xl xl:text-6xl leading-[1.05] font-black text-slate-900 tracking-tight">
                 Strategic <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Leadership.</span> <br className="hidden sm:block" />
                 Digital <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-slate-600">Innovation.</span>
-              </h1>
+              </h2>
               <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-slate-700 max-w-2xl mx-auto lg:mx-0">
                 Bridging business strategy with <span className="text-blue-600 italic">Industry 4.0</span> mastery.
               </h2>
