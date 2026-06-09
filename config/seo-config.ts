@@ -428,54 +428,79 @@ export const ORGANIZATION_SCHEMA: Record<string, unknown> = {
     // "https://www.instagram.com/...",
   ],
   // Subjects / courses offered — helps with educational entity recognition
-  hasOfferCatalog: {
-    "@type": "OfferCatalog",
-    name: "Physics & Chess Tuition Programmes",
-    itemListElement: [
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Course",
-          name: "GCE O-Level Physics Tuition",
-          description: "Comprehensive O-Level Physics coaching with exam-style practice.",
-        },
+ hasOfferCatalog: {
+  "@type": "OfferCatalog",
+  name: "Physics & Chess Tuition Programmes",
+  itemListElement: [
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Course",
+        name: "GCE O-Level Physics Tuition",
+        description: "Comprehensive O-Level Physics coaching with exam-style practice.",
+        url: "https://www.makephysicseasy.com/courses",
       },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Course",
-          name: "A-Level H2 Physics Tuition",
-          description: "H2 Physics tuition for JC students targeting grade A.",
-        },
+      price: "90",
+      priceCurrency: "SGD",
+      url: "https://www.makephysicseasy.com/courses",
+      availability: "https://schema.org/InStock",
+    },
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Course",
+        name: "A-Level H2 Physics Tuition",
+        description: "H2 Physics tuition for JC students targeting grade A.",
+        url: "https://www.makephysicseasy.com/courses",
       },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Course",
-          name: "IB HL/SL Physics Tuition",
-          description: "IB Physics coaching for Diploma Programme students.",
-        },
+      price: "110",
+      priceCurrency: "SGD",
+      url: "https://www.makephysicseasy.com/courses",
+      availability: "https://schema.org/InStock",
+    },
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Course",
+        name: "IB HL/SL Physics Tuition",
+        description: "IB Physics coaching for Diploma Programme students.",
+        url: "https://www.makephysicseasy.com/courses",
       },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Course",
-          name: "IGCSE & IP Physics Tuition",
-          description: "IGCSE and Integrated Programme Physics coaching.",
-        },
+      price: "120",
+      priceCurrency: "SGD",
+      url: "https://www.makephysicseasy.com/courses",
+      availability: "https://schema.org/InStock",
+    },
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Course",
+        name: "IGCSE & IP Physics Tuition",
+        description: "IGCSE and Integrated Programme Physics coaching.",
+        url: "https://www.makephysicseasy.com/courses",
       },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Course",
-          name: "Chess Strategy Coaching",
-          description: "FIDE-certified chess coaching for strategic thinking development.",
-        },
+      price: "100",
+      priceCurrency: "SGD",
+      url: "https://www.makephysicseasy.com/courses",
+      availability: "https://schema.org/InStock",
+    },
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Course",
+        name: "Chess Strategy Coaching",
+        description: "FIDE-certified chess coaching for strategic thinking development.",
+        url: "https://www.makephysicseasy.com/courses",
       },
-    ],
-  },
+      price: "0",
+      priceCurrency: "SGD",
+      url: "https://www.makephysicseasy.com/contact",
+      description: "Enquire for pricing",
+      availability: "https://schema.org/InStock",
+    },
+  ],
+},
 };
-
 /**
  * SITELINKS SEARCHBOX SCHEMA
  * Enables a search box on the brand SERP (Google may show this for navigational queries).
@@ -530,12 +555,18 @@ export function getCourseSchema(course: {
       courseMode: ["onsite", "online"],
       courseWorkload: "PT2H",
       // ✅ startDate required by Google — use enrollment open date
-      startDate: "2025-01-06",
+      startDate: new Date().toISOString().split("T")[0],
       // ✅ location required by Google
       location: {
-        "@type": "Place",
-        name: "Physics Made Easy — Toa Payoh",
-        address: {
+    "@type": "Place",
+      name: "Physics Made Easy — Toa Payoh",
+      url: "https://www.makephysicseasy.com/contact",
+      geo: {
+     "@type": "GeoCoordinates",
+      latitude: 1.3343,
+      longitude: 103.8480
+  },
+  address: { 
           "@type": "PostalAddress",
           streetAddress: "186 Toa Payoh Central, Lobby H 02-430",
           addressLocality: "Singapore",
@@ -560,7 +591,7 @@ export function getCourseSchema(course: {
               ? course.url
               : `${SITE_CONFIG.domain}${course.url}`,
             availability: "https://schema.org/InStock",
-            validFrom: "2025-01-06",
+            validFrom: new Date().toISOString().split("T")[0],
           }
         : {
             "@type": "Offer",
