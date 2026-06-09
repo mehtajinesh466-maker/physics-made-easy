@@ -43,13 +43,13 @@ const PageBanner: React.FC = () => {
       <div className="container mx-auto px-6 md:px-12 relative z-10 flex flex-col items-center text-center">
         
         {/* Title */}
-        <h1 className="text-4xl md:text-6xl font-black text-slate-900 mb-6 tracking-tight relative">
+        <h2 className="text-4xl md:text-6xl font-black text-slate-900 mb-6 tracking-tight relative">
           Study <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-indigo-600">Material</span>
           {/* Decorative Underline */}
           <svg className="absolute w-32 h-3 -bottom-2 left-1/2 -translate-x-1/2 text-teal-400 opacity-50" viewBox="0 0 100 10" preserveAspectRatio="none">
              <path d="M0 5 Q 25 10 50 5 T 100 5" stroke="currentColor" strokeWidth="4" fill="none" />
           </svg>
-        </h1>
+        </h2>
         
         {/* Description / Subtext */}
         <p className="text-lg md:text-xl text-slate-600 max-w-2xl mb-8 leading-relaxed font-medium">
