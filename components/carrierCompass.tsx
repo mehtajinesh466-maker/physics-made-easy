@@ -181,9 +181,9 @@ Hi Mr. Chew, I'd like to discuss my personalized career roadmap based on these r
               >
                 <Target size={48} strokeWidth={1.5} />
               </motion.div>
-              <h1 className="text-4xl md:text-5xl font-black text-slate-900 mb-6 tracking-tight">
+              <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-6 tracking-tight">
                 Your Career <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-indigo-600">Compass.</span>
-              </h1>
+              </h2>
               <p className="text-slate-500 text-lg md:text-xl mb-12 max-w-xl mx-auto font-medium leading-relaxed">
                 Strategic career mapping for the 2026 STEM landscape. Analyze your cognitive strengths across 10 professional domains.
               </p>
