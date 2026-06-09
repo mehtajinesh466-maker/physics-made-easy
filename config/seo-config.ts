@@ -501,12 +501,21 @@ export function getCourseSchema(course: {
   description: string;
   level: string;
   url: string;
+  price?: string;        // e.g. "90"
+  priceCurrency?: string; // e.g. "SGD"
+  image?: string;
 }): Record<string, unknown> {
   return {
     "@context": "https://schema.org",
     "@type": "Course",
     name: course.title,
     description: course.description,
+    url: course.url.startsWith("http")
+      ? course.url
+      : `${SITE_CONFIG.domain}${course.url}`,
+    image: course.image
+      ? `${SITE_CONFIG.domain}${course.image}`
+      : `${SITE_CONFIG.domain}/og/courses.png`,
     provider: {
       "@type": "Organization",
       "@id": "https://www.makephysicseasy.com/#organization",
@@ -514,14 +523,15 @@ export function getCourseSchema(course: {
       url: SITE_CONFIG.domain,
     },
     educationalLevel: course.level,
-    url: course.url.startsWith("http")
-      ? course.url
-      : `${SITE_CONFIG.domain}${course.url}`,
     inLanguage: "en",
+    // Fix: CourseInstance needs startDate + location to satisfy Google
     hasCourseInstance: {
       "@type": "CourseInstance",
       courseMode: ["onsite", "online"],
       courseWorkload: "PT2H",
+      // ✅ startDate required by Google — use enrollment open date
+      startDate: "2025-01-06",
+      // ✅ location required by Google
       location: {
         "@type": "Place",
         name: "Physics Made Easy — Toa Payoh",
@@ -533,10 +543,36 @@ export function getCourseSchema(course: {
           addressCountry: "SG",
         },
       },
+      // ✅ organizer required by Google
+      organizer: {
+        "@type": "Organization",
+        "@id": "https://www.makephysicseasy.com/#organization",
+        name: "Physics Made Easy",
+        url: "https://www.makephysicseasy.com",
+      },
+      // ✅ offers with price, priceCurrency, url all required
+      offers: course.price
+        ? {
+            "@type": "Offer",
+            price: course.price,
+            priceCurrency: course.priceCurrency ?? "SGD",
+            url: course.url.startsWith("http")
+              ? course.url
+              : `${SITE_CONFIG.domain}${course.url}`,
+            availability: "https://schema.org/InStock",
+            validFrom: "2025-01-06",
+          }
+        : {
+            "@type": "Offer",
+            price: "0",
+            priceCurrency: "SGD",
+            url: `${SITE_CONFIG.domain}/contact`,
+            description: "Contact us for pricing",
+            availability: "https://schema.org/InStock",
+          },
     },
   };
 }
-
 export function getFAQSchema(
   faqs: Array<{ question: string; answer: string }>,
 ): Record<string, unknown> {
