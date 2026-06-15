@@ -418,7 +418,6 @@ export const ORGANIZATION_SCHEMA: Record<string, unknown> = {
       "IGCSE Physics",
       "Chess strategy",
       "Multiple Intelligences theory",
-      email: "contact@makephysicseasy.com"
     ],
   },
   sameAs: [

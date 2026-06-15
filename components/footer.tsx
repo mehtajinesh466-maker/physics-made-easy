@@ -97,6 +97,8 @@ export default function Footer() {
                 { name: "Our Gallery", href: "/gallery" },
                 { name: "Latest Blog", href: "/blog" },
                 { name: "Contact Us", href: "/contact" },
+                 { name: "Privacy", href: "/privacy" },
+
               ].map((link) => (
                 <li key={link.name}>
                   <Link href={link.href} className="flex items-center gap-2 text-sm hover:text-teal-400 transition-colors group">
