@@ -1,4 +1,5 @@
 import type React from "react"
+import type { Metadata } from "next"
 import { GeistSans } from "geist/font/sans"
 import { GeistMono } from "geist/font/mono"
 import Script from "next/script"
@@ -12,7 +13,13 @@ import { getRootMetadata } from "@/lib/seo"
 
 import "./globals.css"
 
-export const metadata = getRootMetadata()
+export const metadata: Metadata = {
+  ...getRootMetadata(),
+
+  verification: {
+    bing: "33ECADB5285686C2099EBFAE8EB4BAD7",
+  },
+}
 
 export default function RootLayout({
   children,
@@ -33,11 +40,11 @@ export default function RootLayout({
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-
             gtag('config', 'G-BWB30G2N9V');
           `}
         </Script>
 
+        {/* Organization Schema */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -57,6 +64,7 @@ export default function RootLayout({
 
         <Footer />
 
+        {/* Vercel Analytics */}
         <Analytics />
       </body>
     </html>
