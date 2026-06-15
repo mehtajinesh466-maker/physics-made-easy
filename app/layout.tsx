@@ -20,7 +20,17 @@ export const metadata: Metadata = {
     bing: "33ECADB5285686C2099EBFAE8EB4BAD7",
   },
 }
+import { ORGANIZATION_SCHEMA, SITELINKS_SEARCHBOX_SCHEMA } from "@/config/seo-config";
 
+// inside the returned JSX, typically right after <body> or in <head>:
+<script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify(ORGANIZATION_SCHEMA) }}
+/>
+<script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify(SITELINKS_SEARCHBOX_SCHEMA) }}
+/>
 export default function RootLayout({
   children,
 }: Readonly<{
