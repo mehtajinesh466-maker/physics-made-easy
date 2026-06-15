@@ -37,7 +37,7 @@ export const SITE_CONFIG = {
   defaultOgImage: "/og/default.png",
   themeColor: "#0d9488",
   googleVerification: "QYUm0yBJfsoy9OOV0OkQguoz_ME6vAHST6CPIVaV9ZU",
-  bingVerification: "", // ← FILL IN: bing.com/webmasters → Add site → Meta tag
+  bingVerification: "33ECADB5285686C2099EBFAE8EB4BAD7", // ← FILL IN: bing.com/webmasters → Add site → Meta tag
   /**
    * hreflang self-reference: tells Google the canonical language/region.
    * Render this as <link rel="alternate" hreflang="en-SG" href={canonical} />
@@ -77,7 +77,7 @@ export const PAGE_SEO: Record<string, PageSeoEntry> = {
   "/": {
     // Previous title "Physics Made Easy Academy" = 25 chars → too short.
     // New title targets 52 chars and leads with the primary keyword phrase.
-    title: "Physics Tuition Singapore | O-Level, A-Level & IB",
+    title: "Physics Tuition Singapore | O-Level, A-Level & IB Physics Tutor",
     description:
       "Ex-MOE scholar Mr. Chew teaches O-Level, A-Level & IB Physics in Singapore. Multiple Intelligences method, proven A/B results. Book a trial lesson today.",
     keywords: [
@@ -418,6 +418,7 @@ export const ORGANIZATION_SCHEMA: Record<string, unknown> = {
       "IGCSE Physics",
       "Chess strategy",
       "Multiple Intelligences theory",
+      email: "contact@makephysicseasy.com",
     ],
   },
   sameAs: [
