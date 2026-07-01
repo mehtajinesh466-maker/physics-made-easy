@@ -111,8 +111,7 @@ export default function WhyChooseUsSection() {
             The Competitive Edge
           </span>
           <h2 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tight mb-6">
-            More Than Just <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-indigo-600">Grades.</span><br className="hidden md:block"/>
-            We Build <span className="text-indigo-600">Intelligent Minds.</span>
+            O-Level Physics Tuition That Builds <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-indigo-600">Real Understanding.</span>
           </h2>
           <p className="max-w-3xl mx-auto text-slate-600 text-lg md:text-xl leading-relaxed">
             From the laws of Physics to the strategies of the Grandmasters, we provide a multidisciplinary approach to education that prepares students for Singapore&apos;s most rigorous exams.

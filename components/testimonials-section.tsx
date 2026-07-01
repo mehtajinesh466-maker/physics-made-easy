@@ -117,9 +117,9 @@ export default function TestimonialsSection() {
               <span>Verified Google Reviews</span>
             </motion.div>
             <h2 className="text-4xl md:text-5xl font-black text-slate-900 leading-[1.1] tracking-tight">
-              Real Results. <br />
+              Real Student Results <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-indigo-600">
-                Transformative Learning.
+                — O-Level, A-Level & IB Physics Singapore
               </span>
             </h2>
           </div>

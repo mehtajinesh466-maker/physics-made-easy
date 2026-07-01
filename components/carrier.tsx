@@ -112,8 +112,8 @@ const CareerGuidance = () => {
               <Zap size={14} className="text-teal-400 fill-teal-400" /> Professional Future-Proofing
             </div>
             <h2 className="text-4xl md:text-5xl font-black text-slate-900 leading-[1.1] tracking-tight">
-              Physics is the Language of <br/>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-indigo-600">The Future Economy.</span>
+              Physics Tuition Singapore for <br/>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-indigo-600">O-Level, A-Level & IB Students</span>
             </h2>
             <p className="mt-6 text-slate-500 text-lg max-w-2xl leading-relaxed">
               We don't just teach for exams; we prepare students for high-stakes careers in <strong>Singapore's Quantum, Space, and FinTech</strong> sectors.

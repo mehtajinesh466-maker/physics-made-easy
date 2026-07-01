@@ -131,9 +131,9 @@ export default function LeadInstructorSection() {
                 Trusted by 1000+ Students
               </div>
               <h2 className="text-4xl md:text-5xl font-black text-slate-900 leading-[1.1] tracking-tight">
-                Academic Rigor Meets <br className="hidden md:block" />
+                A-Level Physics Tuition Singapore <br className="hidden md:block" />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 via-indigo-600 to-purple-600">
-                  Strategic Clarity.
+                  — Rigorous, Strategic, Proven
                 </span>
               </h2>
               <p className="text-slate-600 text-lg md:text-xl leading-relaxed max-w-2xl">

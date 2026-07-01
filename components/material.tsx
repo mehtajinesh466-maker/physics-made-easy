@@ -111,8 +111,8 @@ export default function ResourcesSection() {
               <Zap size={14} className="text-teal-400 fill-teal-400" /> Community Open Access
             </motion.div>
             <h2 className="text-4xl md:text-5xl font-black text-slate-900 leading-[1.1] tracking-tight">
-              Master Physics with <br className="hidden md:block"/>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 via-indigo-600 to-purple-600">Free Elite Resources.</span>
+              Free Physics Resources for <br className="hidden md:block"/>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 via-indigo-600 to-purple-600">Singapore O-Level & A-Level Students</span>
             </h2>
             <p className="mt-6 text-slate-500 text-lg md:text-xl font-medium leading-relaxed">
               We believe in democratizing high-level STEM education. Access our curated library of <strong>video lectures</strong> and <strong>conceptual deconstructions</strong> at no cost.

@@ -122,9 +122,9 @@ export default function PhilosophySection() {
             </div>
             
             <h2 className="text-4xl lg:text-5xl font-black text-slate-900 leading-[1.1] tracking-tight">
-              Teaching for <br/>
+              How Mr. Chew Teaches <br/>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 via-indigo-600 to-purple-600">
-                Cognitive Depth.
+                Physics Differently
               </span>
             </h2>
             

@@ -103,11 +103,11 @@ export default function HeroSection() {
             {/* Main Headline - SEO Optimized with Keywords */}
             <motion.div variants={itemVariants} className="space-y-4">
               <h1 className="text-4xl sm:text-5xl md:text-6xl xl:text-6xl leading-[1.05] font-black text-slate-900 tracking-tight">
-                Master <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-indigo-600">Physics.</span> <br className="hidden sm:block" />
-                Conquer <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">Chess.</span>
+                Expert <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-indigo-600">Physics Tuition Singapore</span> <br className="hidden sm:block" />
+                | <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">O-Level, A-Level & IB</span>
               </h1>
               <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-slate-700 max-w-2xl mx-auto lg:mx-0">
-                Unlock potential through <span className="text-indigo-600 italic">Multiple Intelligences</span> Theory.
+                Physics Tuition in Singapore Built on <span className="text-indigo-600 italic">Multiple Intelligences</span> Theory
               </h2>
             </motion.div>
 

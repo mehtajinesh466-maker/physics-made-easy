@@ -35,9 +35,9 @@ export default function CTASection() {
             </div>
             
             <h2 className="text-3xl md:text-4xl font-black text-white mb-2 leading-tight">
-              Ready to Master <br className="hidden md:block" />
+              Ready to Excel? Book a Trial <br className="hidden md:block" />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-indigo-400">
-                Physics & Chess?
+                Physics Lesson in Singapore
               </span>
             </h2>
             

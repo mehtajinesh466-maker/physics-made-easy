@@ -117,8 +117,8 @@ export default function SuccessStories() {
               viewport={{ once: true }}
               className="text-4xl lg:text-5xl font-black text-slate-900 leading-[1.1] tracking-tight"
             >
-              Proven Track Record of <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-indigo-600">Academic Transformation.</span>
+              Proven Results: O-Level, A-Level <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-indigo-600">& IB Physics Success in Singapore</span>
             </motion.h2>
           </div>
           <p className="text-slate-500 font-medium text-lg max-w-xs md:text-right">
