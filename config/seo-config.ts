@@ -77,7 +77,7 @@ export const PAGE_SEO: Record<string, PageSeoEntry> = {
   "/": {
     // Previous title "Physics Made Easy Academy" = 25 chars → too short.
     // New title targets 52 chars and leads with the primary keyword phrase.
-    title: "Physics Tuition Singapore | O-Level, A-Level & IB Physics Tutor",
+    title: "Physics Tuition Singapore | O-Level, A -Level & IB Levels",
     description:
       "Ex-MOE scholar Mr. Chew teaches O-Level, A-Level & IB Physics in Singapore. Multiple Intelligences method, proven A/B results. Book a trial lesson today.",
     keywords: [
