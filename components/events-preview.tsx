@@ -39,7 +39,7 @@ const programsSchema = {
 const programs = [
   {
     id: "o-level",
-    title: "GCE O-Level Physics",
+    title: "GCE O-Level Physics Tuition Singapore",
     subject: "Pure/Combined",
     price: "SG$90",
     duration: "2 hrs",
@@ -51,7 +51,7 @@ const programs = [
   },
   {
     id: "ib-physics",
-    title: "IB HL / SL Physics",
+    title: "IB HL/SL Physics Tutor Singapore",
     subject: "Int. Baccalaureate",
     price: "SG$120",
     duration: "2 hrs",
@@ -63,7 +63,7 @@ const programs = [
   },
   {
     id: "a-level",
-    title: "H2 Physics A-Level",
+    title: "H2 Physics A-Level Tuition Singapore",
     subject: "Junior College",
     price: "SG$110",
     duration: "2 hrs",
@@ -75,7 +75,7 @@ const programs = [
   },
   {
     id: "igcse",
-    title: "IGCSE / IP Physics",
+    title: "IGCSE & IP Physics Tuition Singapore",
     subject: "Int. Curriculum",
     price: "SG$100",
     duration: "2 hrs",

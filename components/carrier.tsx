@@ -180,7 +180,7 @@ const CareerGuidance = () => {
           {/* Roadmap (Left 7) */}
           <div className="lg:col-span-7">
             <h3 className="text-3xl font-black text-slate-900 mb-10 flex items-center gap-3">
-              <Calendar className="text-teal-600" /> 5-Year Success Blueprint
+              <Calendar className="text-teal-600" /> 5-Year O-Level & A-Level Physics Success Blueprint
             </h3>
             <div className="relative space-y-10 pl-8 border-l-2 border-slate-200">
               {[

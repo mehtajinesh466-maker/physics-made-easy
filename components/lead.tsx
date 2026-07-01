@@ -89,7 +89,7 @@ export default function LeadInstructorSection() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent"></div>
               <div className="absolute bottom-8 left-8 text-white">
-                <h3 className="text-2xl font-black tracking-tight">Mr. Chew Kok Mun</h3>
+                <h3 className="text-2xl font-black tracking-tight">Mr. Chew — Ex-MOE Scholar, Physics Tutor Singapore</h3>
                 <div className="flex items-center gap-2 mt-1">
                   <ShieldCheck size={16} className="text-teal-400" />
                   <p className="text-xs font-bold text-teal-400 uppercase tracking-widest">PSC Teaching Scholar</p>
