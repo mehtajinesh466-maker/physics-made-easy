@@ -143,7 +143,7 @@ export default async function BlogDetailPage({ params }: Props) {
             prose-a:text-teal-600 prose-a:no-underline hover:prose-a:underline
           ">
             {/* If content is string/html. If it's structured, map it here */}
-            {post.content}
+            <div dangerouslySetInnerHTML={{ __html: post.content }} />
           </div>
 
           {/* Post Footer Tags */}

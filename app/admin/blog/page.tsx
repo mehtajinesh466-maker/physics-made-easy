@@ -1,6 +1,11 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import dynamic from "next/dynamic";
+import "react-quill/dist/quill.snow.css";
+
+const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
+
 import { 
   addBlogPost, 
   editBlogPost, 
@@ -30,6 +35,26 @@ export default function BlogAdmin() {
   const [editingItem, setEditingItem] = useState<any>(null);
   const [imageUrl, setImageUrl] = useState("");
   const [searchTerm, setSearchTerm] = useState("");
+  const [content, setContent] = useState("");
+
+  const modules = {
+    toolbar: [
+      [{ 'header': 1 }, { 'header': 2 }, { 'header': 3 }],
+      ['bold', 'italic', 'underline', 'strike'],
+      [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+      ['blockquote', 'code-block'],
+      ['link', 'image'],
+      ['clean']
+    ],
+  };
+
+  const formats = [
+    'header',
+    'bold', 'italic', 'underline', 'strike',
+    'list', 'bullet',
+    'blockquote', 'code-block',
+    'link', 'image'
+  ];
 
   // Initial Data Fetch
   useEffect(() => {
@@ -90,12 +115,14 @@ export default function BlogAdmin() {
   function openAdd() {
     setEditingItem(null);
     setImageUrl("");
+    setContent("");
     setIsModalOpen(true);
   }
 
   function openEdit(post: any) {
     setEditingItem(post);
     setImageUrl(post.image);
+    setContent(post.content || "");
     setIsModalOpen(true);
   }
 
@@ -103,6 +130,7 @@ export default function BlogAdmin() {
     setIsModalOpen(false);
     setEditingItem(null);
     setImageUrl("");
+    setContent("");
   }
 
   // Filter Logic
@@ -312,14 +340,27 @@ export default function BlogAdmin() {
                     </div>
 
                     <div className="space-y-2">
-                        <label className="block text-xs font-bold text-slate-500 uppercase tracking-wide">Main Content (Markdown/HTML)</label>
-                        <textarea 
-                            name="content" 
-                            defaultValue={editingItem?.content} 
-                            rows={12}
-                            placeholder="Write your full article here..." 
-                            className="w-full p-4 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-amber-500 outline-none text-slate-700 font-mono text-sm leading-relaxed" 
-                        />
+                        <label className="block text-xs font-bold text-slate-500 uppercase tracking-wide">Main Content</label>
+                        <input type="hidden" name="content" value={content} />
+                        
+                        {/* Custom styles to ensure editor height is maintained without breaking Quill's internal layout */}
+                        <style>{`
+                          .ql-editor {
+                            min-height: 300px;
+                            font-size: 16px;
+                          }
+                        `}</style>
+                        
+                        <div className="bg-white rounded-xl overflow-hidden border border-slate-200">
+                          <ReactQuill 
+                            theme="snow"
+                            value={content}
+                            onChange={setContent}
+                            modules={modules}
+                            formats={formats}
+                            placeholder="Write your full article here..."
+                          />
+                        </div>
                     </div>
                 </div>
               </div>
