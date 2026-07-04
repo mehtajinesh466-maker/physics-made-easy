@@ -79,7 +79,7 @@ const Header: React.FC = () => {
     { name: "Courses", href: "/courses" }, // Single Page Now
     {
       name: "Methodology",
-      href: "/methodology",
+      href: "/",
       hasDropdown: true,
       subMenu: [
         { name: "Multiple Intelligences", href: "/multiple" },

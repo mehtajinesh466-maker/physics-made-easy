@@ -119,7 +119,7 @@ export default function Footer() {
             <ul className="space-y-3">
               {[
                 { name: "All Courses", href: "/courses" },
-                { name: "Methodology", href: "/methodology" },
+                { name: "Methodology", href: "/" },
                 { name: "Multiple Intelligences", href: "/multiple" },
                 { name: "Science Understanding", href: "/science" },
                 { name: "Study Material", href: "/study" },
