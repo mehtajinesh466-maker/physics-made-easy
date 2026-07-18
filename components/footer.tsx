@@ -94,11 +94,11 @@ export default function Footer() {
               {[
                 { name: "Home", href: "/" },
                 { name: "About Us", href: "/about" },
-                { name: "Our Gallery", href: "/gallery" },
-                { name: "Latest Blog", href: "/blog" },
+                { name: "Our Methodology", href: "/methodology" },
+                { name: "Verified Results", href: "/testimonials" },
+                { name: "Free Resources", href: "/resources" },
                 { name: "Contact Us", href: "/contact" },
-                 { name: "Privacy", href: "/privacy" },
-
+                { name: "Privacy", href: "/privacy" },
               ].map((link) => (
                 <li key={link.name}>
                   <Link href={link.href} className="flex items-center gap-2 text-sm hover:text-teal-400 transition-colors group">
@@ -119,10 +119,11 @@ export default function Footer() {
             <ul className="space-y-3">
               {[
                 { name: "All Courses", href: "/courses" },
-                { name: "Methodology", href: "/" },
-                { name: "Multiple Intelligences", href: "/multiple" },
-                { name: "Science Understanding", href: "/science" },
-                { name: "Study Material", href: "/study" },
+                { name: "O-Level Physics", href: "/courses/o-level" },
+                { name: "IB Physics", href: "/courses/ib-physics" },
+                { name: "A-Level H2 Physics", href: "/courses/a-level" },
+                { name: "Chess Coaching", href: "/courses/chess" },
+                { name: "STEM Skills Mentorship", href: "/courses/skills" },
               ].map((link) => (
                 <li key={link.name}>
                   <Link href={link.href} className="flex items-center gap-2 text-sm hover:text-indigo-400 transition-colors group">

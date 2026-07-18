@@ -21,6 +21,27 @@ import { getCourses } from "@/app/actions/adminActions";
 
 const categories = ["All", "Physics", "Chess", "Skills"];
 
+const getCourseLink = (course: any) => {
+  const title = course.title.toLowerCase();
+  const slug = (course.slug || "").toLowerCase();
+  if (title.includes("o-level") || title.includes("o level") || slug.includes("o-level") || slug.includes("olevel")) {
+    return "/courses/o-level";
+  }
+  if (title.includes("ib-physics") || title.includes("ib physics") || title.includes("ib") || slug.includes("ib")) {
+    return "/courses/ib-physics";
+  }
+  if (title.includes("a-level") || title.includes("a level") || title.includes("h2") || slug.includes("a-level") || slug.includes("h2")) {
+    return "/courses/a-level";
+  }
+  if (title.includes("chess") || slug.includes("chess")) {
+    return "/courses/chess";
+  }
+  if (title.includes("stem") || title.includes("skills") || slug.includes("skills") || slug.includes("stem")) {
+    return "/courses/skills";
+  }
+  return `/courses/${course.slug}`;
+};
+
 export default function CoursesPage() {
   const [activeCategory, setActiveCategory] = useState("All");
   const [courses, setCourses] = useState<any[]>([]);
@@ -158,9 +179,11 @@ export default function CoursesPage() {
                           </div>
                       </div>
 
-                      <h3 className="text-2xl font-bold text-slate-900 mb-3 group-hover:text-teal-600 transition-colors">
-                          {course.title}
-                      </h3>
+                      <Link href={getCourseLink(course)}>
+                        <h3 className="text-2xl font-bold text-slate-900 mb-3 group-hover:text-teal-600 transition-colors">
+                            {course.title}
+                        </h3>
+                      </Link>
                       
                       <p className="text-slate-500 text-sm leading-relaxed mb-6 line-clamp-3">
                           {course.description}
@@ -178,13 +201,20 @@ export default function CoursesPage() {
                         </div>
                       )}
 
-                      {/* CTA Button */}
-                      <Link href={`https://wa.me/6597277419?text=I'm interested in ${course.title}`} className="mt-auto" target="_blank">
-                        <button className="w-full py-3.5 rounded-xl font-bold text-sm bg-slate-50 text-slate-900 border border-slate-200 group-hover:bg-slate-900 group-hover:text-white group-hover:border-slate-900 transition-all flex items-center justify-center gap-2">
-                            Book a Slot
-                            <ArrowRight size={16} />
-                        </button>
-                      </Link>
+                      {/* CTA Buttons */}
+                      <div className="flex gap-3 mt-auto">
+                        <Link href={getCourseLink(course)} className="flex-1">
+                          <button className="w-full py-3.5 rounded-xl font-bold text-sm bg-slate-50 text-slate-900 border border-slate-200 hover:bg-slate-100 transition-all flex items-center justify-center">
+                              Learn More
+                          </button>
+                        </Link>
+                        <Link href={`https://wa.me/6597277419?text=I'm interested in ${course.title}`} className="flex-1" target="_blank">
+                          <button className="w-full py-3.5 rounded-xl font-bold text-sm bg-slate-900 text-white border border-slate-900 hover:bg-teal-600 hover:border-teal-600 transition-all flex items-center justify-center gap-1">
+                              Book Slot
+                              <ArrowRight size={14} />
+                          </button>
+                        </Link>
+                      </div>
                     </div>
                   </motion.div>
                 ))

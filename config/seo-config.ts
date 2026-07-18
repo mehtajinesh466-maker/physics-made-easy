@@ -299,6 +299,139 @@ export const PAGE_SEO: Record<string, PageSeoEntry> = {
     twitter: { card: "summary", image: "/og/contact.png" },
   },
 
+  "/methodology": {
+    title: "Physics Teaching Methodology Singapore | Multiple Intelligences | Mr. Chew",
+    description:
+      "Mr. Chew applies Howard Gardner's Multiple Intelligences theory to Physics and Chess coaching in Singapore. Discover the MI method that delivers 95% A/B results at O-Level and 100% Grade 7 at IB HL.",
+    keywords: [
+      "physics teaching methodology singapore",
+      "multiple intelligences physics",
+      "howard gardner physics tuition",
+      "chess and physics coaching",
+    ],
+    canonical: "https://www.makephysicseasy.com/methodology",
+    ogImage: "/og/methodology.png",
+    og: { image: "/og/methodology.png" },
+    twitter: { card: "summary_large_image", image: "/og/methodology.png" },
+  },
+
+  "/testimonials": {
+    title: "Student Results & Testimonials | Physics Made Easy Singapore | Mr. Chew",
+    description:
+      "Read verified results from Physics Made Easy students — O-Level A1, A-Level Distinction, IB HL Grade 7. Hear from HCIS, NJC, ACSI and RI students coached by ex-MOE scholar Mr. Chew.",
+    keywords: [
+      "physics tuition reviews singapore",
+      "physics tuition results",
+      "o level physics distinction",
+      "ib physics grade 7 results",
+      "h2 physics distinction",
+    ],
+    canonical: "https://www.makephysicseasy.com/testimonials",
+    ogImage: "/og/testimonials.png",
+    og: { image: "/og/testimonials.png" },
+    twitter: { card: "summary_large_image", image: "/og/testimonials.png" },
+  },
+
+  "/resources": {
+    title: "Free Physics Resources Singapore | O-Level, A-Level & IB Notes & Videos | Mr. Chew",
+    description:
+      "Access free physics notes, video masterclasses, exam trend analysis, and chess strategy videos for O-Level, A-Level, and IB Physics students in Singapore. Curated by ex-MOE scholar Mr. Chew.",
+    keywords: [
+      "free physics resources singapore",
+      "o level physics notes free",
+      "h2 physics study material",
+      "ib physics revision notes",
+      "physics exam trend analysis",
+    ],
+    canonical: "https://www.makephysicseasy.com/resources",
+    ogImage: "/og/resources.png",
+    og: { image: "/og/resources.png" },
+    twitter: { card: "summary_large_image", image: "/og/resources.png" },
+  },
+
+  "/courses/o-level": {
+    title: "O-Level Physics Tuition Singapore | Pure & Combined | Ex-MOE Scholar | Mr. Chew",
+    description:
+      "O-Level Physics tuition in Singapore led by ex-MOE PSC Scholar Mr. Chew. Pure and Combined Physics. 95% A1/A2 track record. Small groups in Toa Payoh. Book a free trial.",
+    keywords: [
+      "o level physics tuition singapore",
+      "pure physics tuition",
+      "combined physics tuition",
+      "toa payoh physics tuition",
+    ],
+    canonical: "https://www.makephysicseasy.com/courses/o-level",
+    ogImage: "/og/courses-o-level.png",
+    og: { image: "/og/courses-o-level.png" },
+    twitter: { card: "summary_large_image", image: "/og/courses-o-level.png" },
+  },
+
+  "/courses/ib-physics": {
+    title: "IB Physics Tutor Singapore | HL & SL | IA/EE Mentorship | Grade 7 Results",
+    description:
+      "IB Physics tuition in Singapore by ex-MOE scholar Mr. Chew. 95% Grade 7 HL track record. IA and Extended Essay mentorship. Small groups and 1-on-1. Book a free trial today.",
+    keywords: [
+      "ib physics tutor singapore",
+      "ib hl physics tuition",
+      "ib sl physics tuition",
+      "ib physics ia mentor",
+      "ib physics ee coaching",
+    ],
+    canonical: "https://www.makephysicseasy.com/courses/ib-physics",
+    ogImage: "/og/courses-ib.png",
+    og: { image: "/og/courses-ib.png" },
+    twitter: { card: "summary_large_image", image: "/og/courses-ib.png" },
+  },
+
+  "/courses/a-level": {
+    title: "H2 Physics Tuition Singapore | A-Level JC Physics | Quantum & Electromagnetism",
+    description:
+      "H2 Physics tuition Singapore for JC1 and JC2 students. Led by ex-MOE PSC Scholar Mr. Chew. Covers Quantum, EM Induction, Field Theory. 80% A/B track record. Book a trial.",
+    keywords: [
+      "h2 physics tuition singapore",
+      "a level physics tuition",
+      "jc physics tuition",
+      "electromagnetism tuition",
+      "quantum physics jc",
+    ],
+    canonical: "https://www.makephysicseasy.com/courses/a-level",
+    ogImage: "/og/courses-a-level.png",
+    og: { image: "/og/courses-a-level.png" },
+    twitter: { card: "summary_large_image", image: "/og/courses-a-level.png" },
+  },
+
+  "/courses/chess": {
+    title: "Chess Coaching Singapore | FIDE Certified Instructor | Strategic Thinking for Students",
+    description:
+      "Chess coaching in Singapore by FIDE-certified International Instructor Mr. Chew. Develop tactical thinking, focus, and problem-solving skills for academic and competitive success.",
+    keywords: [
+      "chess coaching singapore",
+      "fide chess instructor",
+      "chess classes for kids singapore",
+      "strategic thinking training",
+    ],
+    canonical: "https://www.makephysicseasy.com/courses/chess",
+    ogImage: "/og/courses-chess.png",
+    og: { image: "/og/courses-chess.png" },
+    twitter: { card: "summary_large_image", image: "/og/courses-chess.png" },
+  },
+
+  "/courses/skills": {
+    title: "STEM Skills Mentorship Singapore | Quantum, FinTech & Career Readiness | Mr. Chew",
+    description:
+      "STEM career mentorship for Singapore students. Prepare for roles in Quantum Technology, FinTech, Green Energy, and Space with guidance from ex-MOE scholar Mr. Chew and industry mentor Peter Loh.",
+    keywords: [
+      "stem skills mentorship",
+      "career readiness singapore",
+      "quantum tech learning",
+      "fintech career guide",
+      "peter loh mentor",
+    ],
+    canonical: "https://www.makephysicseasy.com/courses/skills",
+    ogImage: "/og/courses-skills.png",
+    og: { image: "/og/courses-skills.png" },
+    twitter: { card: "summary_large_image", image: "/og/courses-skills.png" },
+  },
+
   "/terms": {
     title: "Terms of Service | Physics Made Easy",
     description:
@@ -808,6 +941,14 @@ export const CRAWL_RULES = {
     "/contact",
     "/terms",
     "/privacy",
+    "/methodology",
+    "/testimonials",
+    "/resources",
+    "/courses/o-level",
+    "/courses/ib-physics",
+    "/courses/a-level",
+    "/courses/chess",
+    "/courses/skills",
   ],
   disallow: [
     "/admin",
@@ -851,4 +992,12 @@ export const SITEMAP_STATIC_PAGES: Array<{
   { path: "/gallery", changeFrequency: "monthly", priority: 0.5 },
   { path: "/terms", changeFrequency: "yearly", priority: 0.3 },
   { path: "/privacy", changeFrequency: "yearly", priority: 0.3 },
+  { path: "/methodology", changeFrequency: "weekly", priority: 0.8 },
+  { path: "/testimonials", changeFrequency: "weekly", priority: 0.8 },
+  { path: "/resources", changeFrequency: "weekly", priority: 0.8 },
+  { path: "/courses/o-level", changeFrequency: "weekly", priority: 0.8 },
+  { path: "/courses/ib-physics", changeFrequency: "weekly", priority: 0.8 },
+  { path: "/courses/a-level", changeFrequency: "weekly", priority: 0.8 },
+  { path: "/courses/chess", changeFrequency: "weekly", priority: 0.8 },
+  { path: "/courses/skills", changeFrequency: "weekly", priority: 0.8 },
 ];
