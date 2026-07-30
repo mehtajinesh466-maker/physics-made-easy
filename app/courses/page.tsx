@@ -19,11 +19,14 @@ import {
 import CoursesBanner from "@/components/ui/chessBanner"; // Ensure this path is correct
 import { getCourses } from "@/app/actions/adminActions";
 
-const categories = ["All", "Physics", "Chess", "Skills"];
+const categories = ["All", "Physics", "AEIS Math", "Chess", "Skills"];
 
 const getCourseLink = (course: any) => {
   const title = course.title.toLowerCase();
   const slug = (course.slug || "").toLowerCase();
+  if (title.includes("aeis") || slug.includes("aeis")) {
+    return "/courses/aeis-maths";
+  }
   if (title.includes("o-level") || title.includes("o level") || slug.includes("o-level") || slug.includes("olevel")) {
     return "/courses/o-level";
   }
@@ -42,6 +45,57 @@ const getCourseLink = (course: any) => {
   return `/courses/${course.slug}`;
 };
 
+const defaultCourses = [
+  {
+    id: 1,
+    title: "O-Level Physics Tuition Singapore",
+    category: "Physics",
+    level: "Secondary 3 - 4",
+    price: "$90/session",
+    image: "/student.webp",
+    description: "Pure & Combined Physics coaching aligned with the Singapore MOE GCE O-Level syllabus.",
+    features: ["Pure & Combined Syllabus", "TYS & Exam Drills", "Mr. Chew's Master Notes"],
+    slug: "o-level",
+    popular: true
+  },
+  {
+    id: 2,
+    title: "AEIS Mathematics Preparation Programme",
+    category: "AEIS Math",
+    level: "Primary 2 - Secondary 3",
+    price: "$95/session",
+    image: "/student.webp",
+    description: "Structured Singapore Mathematics preparation designed for international students seeking government school admission.",
+    features: ["Singapore MOE Math Framework", "Mock Exam Drills", "Step-by-Step Problem Solving"],
+    slug: "aeis-maths",
+    popular: true
+  },
+  {
+    id: 3,
+    title: "IB HL/SL Physics Tuition Singapore",
+    category: "Physics",
+    level: "IB Year 1 - Year 2",
+    price: "$120/session",
+    image: "/student.webp",
+    description: "Specialized International Baccalaureate Higher & Standard Level Physics tutoring.",
+    features: ["IA & EE Guidance", "Paper 1, 2 & 3 Strategies", "Proven Grade 7 Track Record"],
+    slug: "ib-physics",
+    popular: false
+  },
+  {
+    id: 4,
+    title: "A-Level H2 Physics Tuition Singapore",
+    category: "Physics",
+    level: "JC 1 - JC 2",
+    price: "$110/session",
+    image: "/student.webp",
+    description: "H2 Physics A-Level preparation for Junior College students targeting top grades.",
+    features: ["Quantum & Fields Focus", "Past Paper Mastery", "Distinction Techniques"],
+    slug: "a-level",
+    popular: false
+  }
+];
+
 export default function CoursesPage() {
   const [activeCategory, setActiveCategory] = useState("All");
   const [courses, setCourses] = useState<any[]>([]);
@@ -53,9 +107,14 @@ export default function CoursesPage() {
     async function fetchData() {
       try {
         const data = await getCourses();
-        setCourses(data);
+        if (data && data.length > 0) {
+          setCourses(data);
+        } else {
+          setCourses(defaultCourses);
+        }
       } catch (error) {
         console.error("Failed to fetch courses:", error);
+        setCourses(defaultCourses);
       } finally {
         setLoading(false);
       }

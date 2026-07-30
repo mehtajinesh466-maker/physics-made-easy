@@ -19,6 +19,9 @@ import CareerCompass from "@/components/carrierCompass"
 import PeterLohMentorProfile from "@/components/advisor"
 
 
+import AlumniSpotlight from "@/components/alumni-spotlight"
+import GoogleReviewsWidget from "@/components/google-reviews-widget"
+
 export default function HomePage() {
   return (
     <div className="min-h-screen">
@@ -30,18 +33,17 @@ export default function HomePage() {
       />
       <main>
         <HeroSection />
-        <WhyChooseUsSection/>
-        <LeadInstructorSection/>
-        <PeterLohMentorProfile/>
-        <CareerGuidance/>
-        <CareerCompass/>
+        <ResultsSection />
+        <WhyChooseUsSection />
+        <PhilosophySection />
+        <LeadInstructorSection />
         <CoursesSection />
-        <PhilosophySection/>
-        <SuccessStories/>
-        <ResultsSection/>
+        <SuccessStories />
+        <AlumniSpotlight />
         <TestimonialsSection />
-        <GallerySection/>
-        <ResourcesSection/>
+        <GoogleReviewsWidget trustindexScript="https://cdn.trustindex.io/loader.js?351328e78efe065f0c46084ef79" />
+        <ResourcesSection />
+        <GallerySection />
         <FaqSection />
         <DemoBookingCTA />
       </main>

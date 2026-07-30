@@ -81,7 +81,13 @@ export const PAGE_SEO: Record<string, PageSeoEntry> = {
     description:
       "Ex-MOE scholar Mr. Chew teaches O-Level, A-Level & IB Physics in Singapore. Multiple Intelligences method, proven A/B results. Book a trial lesson today.",
     keywords: [
-      // High-frequency page terms confirmed by audit keyword scan
+      // High-frequency page terms confirmed by audit keyword scan & priority search intent
+      "online physics tuition singapore",
+      "IB physics online tutor",
+      "A-level physics online tuition",
+      "O-level physics online lessons",
+      "H2 physics online tuition",
+      "AEIS mathematics preparation singapore",
       "physics tuition singapore",
       "O level physics tutor singapore",
       "A level H2 physics tuition",
@@ -91,10 +97,8 @@ export const PAGE_SEO: Record<string, PageSeoEntry> = {
       "Mr Chew physics tutor",
       "ex-MOE scholar physics",
       "physics tuition Toa Payoh",
-      "online physics tuition singapore",
-      "physics and chess coaching singapore",
+      "AEIS maths tutor online",
       "multiple intelligences physics tuition",
-      // Long-tail local intent keywords worth targeting
       "best physics tutor singapore",
       "physics grade A tuition singapore",
     ],
@@ -103,15 +107,43 @@ export const PAGE_SEO: Record<string, PageSeoEntry> = {
     og: {
       title: "Physics Tuition Singapore | O-Level, A-Level & IB | Physics Made Easy",
       description:
-        "Ex-MOE scholar Mr. Chew Kok Mun. Multiple Intelligences method. Proven A/B results for O-Level, A-Level H2 & IB Physics. Toa Payoh + online.",
+        "Ex-MOE scholar Mr. Chew Kok Mun. Multiple Intelligences method. Proven A/B results for O-Level, A-Level H2, IB Physics & AEIS Mathematics. Online & physical classes.",
       image: "/og/home.png",
     },
     twitter: {
       card: "summary_large_image",
       title: "Physics Tuition Singapore | O-Level, A-Level & IB",
       description:
-        "Ex-MOE scholar Mr. Chew. Proven results for O-Level, A-Level & IB Physics. Toa Payoh + online. Book a trial lesson.",
+        "Ex-MOE scholar Mr. Chew. Proven results for O-Level, A-Level, IB Physics & AEIS Maths. Online & physical classes.",
       image: "/og/home.png",
+    },
+  },
+
+  "/courses/aeis-maths": {
+    title: "AEIS Mathematics Preparation Programme | Singapore Government School Admission",
+    description:
+      "Structured AEIS Mathematics preparation for international primary & secondary students seeking admission to Singapore government schools. MOE syllabus aligned, online & small group.",
+    keywords: [
+      "AEIS mathematics preparation",
+      "AEIS maths tuition singapore",
+      "AEIS online tutor malaysia indonesia hk",
+      "Singapore mathematics for international students",
+      "AEIS exam preparation course",
+      "Singapore government school entrance exam maths"
+    ],
+    canonical: "https://www.makephysicseasy.com/courses/aeis-maths",
+    ogImage: "/og/aeis.png",
+    og: {
+      title: "AEIS Mathematics Preparation Programme | Physics Made Easy",
+      description:
+        "Preparing for Singapore government school entry? Structured AEIS Mathematics tuition for international students.",
+      image: "/og/aeis.png",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "AEIS Mathematics Preparation Programme Singapore",
+      description: "Structured AEIS Mathematics preparation for international students.",
+      image: "/og/aeis.png",
     },
   },
 

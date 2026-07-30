@@ -24,6 +24,8 @@ import {
   Atom,
   Sparkles
 } from "lucide-react";
+import AlumniSpotlight from "@/components/alumni-spotlight";
+import GoogleReviewsWidget from "@/components/google-reviews-widget";
 
 const caseStudies = [
   {
@@ -56,7 +58,7 @@ const reviews = [
   {
     quote: "Mr Chew taught me Additional Mathematics for O-levels and is a kind and patient teacher. He managed to make the subject a lot more manageable for me, helping me to improve from a C6 to an A1.",
     author: "Lex",
-    role: "A-Level Physics Student"
+    role: "O-Level Additional Mathematics & Physics Student"
   },
   {
     quote: "Mr Chew is an exceedingly patient and kind tutor who went above and beyond to help me in physics. He made asking questions really easy, which in turn made it significantly less tedious and more fun.",
@@ -124,11 +126,11 @@ export default function TestimonialsPage() {
       {/* Hero Header */}
       <section className="relative w-full bg-slate-50 overflow-hidden pt-32 pb-20 lg:pt-10 lg:pb-12 font-sans text-center">
         {/* 1. Scientific Grid Pattern */}
-        <div className="absolute inset-0 opacity-[0.03]" 
-             style={{ 
-               backgroundImage: 'linear-gradient(#0f172a 1px, transparent 1px), linear-gradient(to right, #0f172a 1px, transparent 1px)', 
-               backgroundSize: '40px 40px' 
-             }}>
+        <div className="absolute inset-0 opacity-[0.03]"
+          style={{
+            backgroundImage: 'linear-gradient(#0f172a 1px, transparent 1px), linear-gradient(to right, #0f172a 1px, transparent 1px)',
+            backgroundSize: '40px 40px'
+          }}>
         </div>
 
         {/* 2. Soft Scientific Blobs */}
@@ -153,7 +155,7 @@ export default function TestimonialsPage() {
             className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-50 border border-cyan-200 text-cyan-700 text-xs font-bold uppercase tracking-widest mb-6 shadow-sm"
           >
             <Shield size={12} />
-            <span>Audited & Verified Track Record (2001-2025)</span>
+            <span>Audited & Verified Track Record (2001-2026)</span>
           </motion.div>
 
           <motion.h1
@@ -164,7 +166,7 @@ export default function TestimonialsPage() {
             Real Student <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-indigo-600">Results</span>
             {/* Decorative Underline */}
             <svg className="absolute w-32 h-3 -bottom-2 left-1/2 -translate-x-1/2 text-cyan-400 opacity-50" viewBox="0 0 100 10" preserveAspectRatio="none">
-               <path d="M0 5 Q 25 10 50 5 T 100 5" stroke="currentColor" strokeWidth="4" fill="none" />
+              <path d="M0 5 Q 25 10 50 5 T 100 5" stroke="currentColor" strokeWidth="4" fill="none" />
             </svg>
           </motion.h1>
 
@@ -183,9 +185,9 @@ export default function TestimonialsPage() {
               <Home className="w-4 h-4" />
               <span>Home</span>
             </Link>
-            
+
             <ChevronRight className="w-4 h-4 text-slate-300" strokeWidth={2.5} />
-            
+
             <span className="text-slate-900 font-bold text-sm">
               Testimonials
             </span>
@@ -222,6 +224,9 @@ export default function TestimonialsPage() {
         </div>
       </section>
 
+      {/* Dedicated Alumni Feature Section */}
+      <AlumniSpotlight />
+
       {/* Detailed Case Studies */}
       <section className="py-16 container mx-auto px-4 md:px-8 max-w-5xl">
         <div className="text-center mb-12">
@@ -244,7 +249,7 @@ export default function TestimonialsPage() {
                 ))}
               </div>
               <h3 className="text-xl md:text-2xl font-bold text-slate-900">{study.title}</h3>
-              
+
               <div className="grid md:grid-cols-12 gap-6 pt-4 border-t border-slate-100">
                 <div className="md:col-span-6 space-y-3">
                   <span className="text-xs font-bold uppercase tracking-wider text-slate-400">Background Context</span>
@@ -268,42 +273,8 @@ export default function TestimonialsPage() {
         </div>
       </section>
 
-      {/* Verified Google Reviews */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4 md:px-8 max-w-5xl">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-6 mb-12">
-            <div>
-              <h2 className="text-3xl font-black text-slate-900 mb-2">What Students & Parents Say</h2>
-              <p className="text-slate-500 text-sm">All reviews verified on Google Business profile</p>
-            </div>
-            <div className="flex flex-col items-center md:items-end gap-1 bg-slate-50 p-4 rounded-2xl border border-slate-200">
-              <div className="flex gap-1 text-amber-400">
-                {[...Array(5)].map((_, i) => <Star key={i} size={18} fill="currentColor" />)}
-              </div>
-              <span className="text-xs font-bold text-slate-700">5.0 Star Rating (Verified reviews)</span>
-            </div>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-6">
-            {reviews.map((rev, i) => (
-              <div key={i} className="p-6 bg-slate-50 border border-slate-200 rounded-2xl flex flex-col justify-between">
-                <p className="text-slate-700 italic text-sm leading-relaxed mb-6">
-                  "{rev.quote}"
-                </p>
-                <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-full bg-cyan-600 text-white flex items-center justify-center font-bold text-xs uppercase">
-                    {rev.author.charAt(0)}
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-slate-900 text-sm">{rev.author}</h4>
-                    <span className="text-slate-500 text-xs font-semibold">{rev.role}</span>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Free Google Reviews Widget Integration */}
+      <GoogleReviewsWidget trustindexScript="https://cdn.trustindex.io/loader.js?351328e78efe065f0c46084ef79" />
 
       {/* Schools List */}
       <section className="py-16 container mx-auto px-4 md:px-8 max-w-4xl text-center">

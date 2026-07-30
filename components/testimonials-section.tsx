@@ -2,13 +2,13 @@
 
 import React from "react";
 import { motion, Variants } from "framer-motion";
-import { 
-  Star, 
-  Quote, 
-  Sparkles, 
-  Atom, 
-  Brain, 
-  Zap, 
+import {
+  Star,
+  Quote,
+  Sparkles,
+  Atom,
+  Brain,
+  Zap,
   Microscope,
   CheckCircle2
 } from "lucide-react";
@@ -17,7 +17,7 @@ const testimonials = [
   {
     id: 1,
     name: "Lex",
-    role: "A-Level Physics Student",
+    role: "O-Level Additional Mathematics & Physics Student",
     improvement: "C6 to A1",
     text: "Mr Chew taught me Additional Mathematics for O-levels and is a kind and patient teacher. He managed to make the subject a lot more manageable for me, helping me to improve from a C6 to an A1.",
     icon: Atom,
@@ -85,29 +85,29 @@ export default function TestimonialsSection() {
 
   const cardVariants: Variants = {
     hidden: { opacity: 0, scale: 0.95, y: 20 },
-    visible: { 
-      opacity: 1, 
-      scale: 1, 
+    visible: {
+      opacity: 1,
+      scale: 1,
       y: 0,
-      transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] } 
+      transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] }
     }
   };
 
   return (
     <section className="relative py-16 lg:py-24 bg-white font-sans overflow-hidden">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      
+
       {/* Subtle Background Pattern */}
       <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none"
-           style={{ backgroundImage: 'radial-gradient(#0f172a 1px, transparent 1px)', backgroundSize: '30px 30px' }}>
+        style={{ backgroundImage: 'radial-gradient(#0f172a 1px, transparent 1px)', backgroundSize: '30px 30px' }}>
       </div>
 
       <div className="container mx-auto px-6 max-w-7xl relative z-10">
-        
+
         {/* --- Responsive Header --- */}
         <div className="flex flex-col lg:flex-row items-center lg:items-end justify-between gap-8 mb-16">
           <div className="max-w-2xl text-center lg:text-left">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: -10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -124,7 +124,7 @@ export default function TestimonialsSection() {
             </h2>
           </div>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             className="flex flex-col items-center lg:items-end gap-2"
@@ -139,7 +139,7 @@ export default function TestimonialsSection() {
         </div>
 
         {/* --- High-Density Staggered Grid --- */}
-        <motion.div 
+        <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -147,14 +147,14 @@ export default function TestimonialsSection() {
           className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8"
         >
           {testimonials.map((item) => (
-            <motion.blockquote 
-              key={item.id} 
+            <motion.blockquote
+              key={item.id}
               variants={cardVariants}
               whileHover={{ y: -5 }}
               className={`relative bg-gradient-to-br ${item.gradient} p-8 rounded-[2.5rem] border ${item.border} flex flex-col h-full transition-all duration-300 group`}
             >
               <Quote className="absolute top-6 right-8 text-slate-900/5 group-hover:text-slate-900/10 transition-colors" size={60} />
-              
+
               <div className="flex-grow relative z-10">
                 <div className="flex items-center gap-2 mb-4">
                   <span className={`px-3 py-1 rounded-full bg-white/80 border ${item.border} text-[10px] font-black uppercase tracking-tighter ${item.color} shadow-sm`}>
@@ -188,15 +188,15 @@ export default function TestimonialsSection() {
 
         {/* --- Compact Meta Footer --- */}
         <div className="mt-16 text-center">
-            <p className="text-slate-400 text-[10px] font-bold uppercase tracking-[0.3em]">
-              Trusted by students from RI, HCIS, NJC, and ACSI
-            </p>
-            <div className="mt-6 flex justify-center gap-8 grayscale opacity-50 contrast-125">
-               {/* These serve as visual trust signals but also help with keyword context */}
-               <span className="text-sm font-black italic text-slate-400 tracking-tighter uppercase">Google Verified</span>
-               <span className="text-sm font-black italic text-slate-400 tracking-tighter uppercase">NIE Standards</span>
-               <span className="text-sm font-black italic text-slate-400 tracking-tighter uppercase">FIDE Certified</span>
-            </div>
+          <p className="text-slate-400 text-[10px] font-bold uppercase tracking-[0.3em]">
+            Trusted by students from RI, HCIS, NJC, and ACSI
+          </p>
+          <div className="mt-6 flex justify-center gap-8 grayscale opacity-50 contrast-125">
+            {/* These serve as visual trust signals but also help with keyword context */}
+            <span className="text-sm font-black italic text-slate-400 tracking-tighter uppercase">Google Verified</span>
+            <span className="text-sm font-black italic text-slate-400 tracking-tighter uppercase">NIE Standards</span>
+            <span className="text-sm font-black italic text-slate-400 tracking-tighter uppercase">FIDE Certified</span>
+          </div>
         </div>
 
       </div>

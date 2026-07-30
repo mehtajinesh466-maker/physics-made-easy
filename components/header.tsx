@@ -75,7 +75,18 @@ const Header: React.FC = () => {
       name: "About", 
       href: "/about",
     },
-    { name: "Courses", href: "/courses" },
+    { 
+      name: "Courses", 
+      href: "/courses",
+      hasDropdown: true,
+      subMenu: [
+        { name: "All Courses", href: "/courses" },
+        { name: "O-Level Physics", href: "/courses/o-level" },
+        { name: "A-Level H2 Physics", href: "/courses/a-level" },
+        { name: "IB Physics Specialist", href: "/courses/ib-physics" },
+        { name: "AEIS Mathematics Prep", href: "/courses/aeis-maths" },
+      ],
+    },
     {
       name: "Methodology",
       href: "/methodology",

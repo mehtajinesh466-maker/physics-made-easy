@@ -31,7 +31,7 @@ export default function CTASection() {
           <div className="relative z-10 text-center md:text-left">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-900/50 border border-teal-500/30 text-teal-300 text-xs font-bold uppercase tracking-wider mb-3">
               <Sparkles size={12} className="text-teal-400" />
-              <span>Limited Slots for 2025</span>
+              <span>Limited Slots for 2026</span>
             </div>
             
             <h2 className="text-3xl md:text-4xl font-black text-white mb-2 leading-tight">

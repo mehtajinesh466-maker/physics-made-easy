@@ -30,7 +30,7 @@ export default function ResultsAndProof() {
   };
 
   return (
-    <section className="relative lg:h-screen flex items-center bg-white overflow-hidden py-12 lg:py-0">
+    <section className="relative py-16 md:py-24 bg-white overflow-hidden">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(seoSchema) }} />
       
       <div className="container mx-auto px-6 max-w-7xl">
@@ -68,7 +68,7 @@ export default function ResultsAndProof() {
             </div>
 
             <p className="text-xs text-slate-400 font-bold uppercase tracking-widest leading-relaxed">
-              *Audited results from 2001-2025. Based on NIE-trained pedagogy & MI Theory alignment.
+              *Audited results from 2001-2026. Based on NIE-trained pedagogy & MI Theory alignment.
             </p>
           </div>
 

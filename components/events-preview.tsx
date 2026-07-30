@@ -86,6 +86,18 @@ const programs = [
     popular: false,
   },
   {
+    id: "aeis-maths",
+    title: "AEIS Mathematics Preparation",
+    subject: "International Admissions",
+    price: "SG$95",
+    duration: "2 hrs",
+    mode: "Small Group / 1-to-1",
+    features: ["P2–S3 Level Admission", "Singapore MOE Math Syllabus", "Mock Exam Drills"],
+    icon: BookOpen,
+    theme: "emerald",
+    popular: true,
+  },
+  {
     id: "chess",
     title: "Chess Strategy",
     subject: "Cognitive Training",

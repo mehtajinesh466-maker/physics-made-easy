@@ -375,7 +375,7 @@ export default function MethodologyPage() {
               },
               {
                 title: "20+ Years Track Record",
-                desc: "Over 1000+ students mentored. Audited 2001–2025 results: 95% O-Level A1/A2, 95% IB Grade 7, 80% A-Level H2 A/B.",
+                desc: "Over 1000+ students mentored. Audited 2001–2026 results: 95% O-Level A1/A2, 95% IB Grade 7, 80% A-Level H2 A/B.",
                 icon: Users
               }
             ].map((card, i) => (

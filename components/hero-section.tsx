@@ -91,23 +91,28 @@ export default function HeroSection() {
             animate="visible"
             className="lg:col-span-7 space-y-6 md:space-y-8 text-center lg:text-left"
           >
-            {/* Badge */}
-            <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-50 border border-indigo-100 text-indigo-700 font-bold text-[10px] sm:text-xs tracking-widest uppercase">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-600"></span>
+            {/* Badges */}
+            <motion.div variants={itemVariants} className="flex flex-wrap items-center justify-center lg:justify-start gap-2">
+              <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-50 border border-indigo-100 text-indigo-700 font-bold text-[10px] sm:text-xs tracking-widest uppercase">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-600"></span>
+                </span>
+                Singapore&apos;s Premier MI-Based Academy
               </span>
-              Singapore&apos;s Premier MI-Based Academy
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-teal-50 border border-teal-200 text-teal-800 font-bold text-[10px] sm:text-xs tracking-wider uppercase">
+                🌐 Online Lessons Available Globally
+              </span>
             </motion.div>
 
             {/* Main Headline - SEO Optimized with Keywords */}
             <motion.div variants={itemVariants} className="space-y-4">
-              <h1 className="text-4xl sm:text-5xl md:text-6xl xl:text-6xl leading-[1.05] font-black text-slate-900 tracking-tight">
-                Expert <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-indigo-600">Physics Tuition Singapore</span> <br className="hidden sm:block" />
+              <h1 className="text-4xl sm:text-5xl md:text-6xl xl:text-5xl leading-[1.05] font-black text-slate-900 tracking-tight">
+                Online & Physical <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-indigo-600">Physics & AEIS Maths Tuition</span> <br className="hidden sm:block" />
                 | <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">O-Level, A-Level & IB</span>
               </h1>
               <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-slate-700 max-w-2xl mx-auto lg:mx-0">
-                Physics Tuition in Singapore Built on <span className="text-indigo-600 italic">Multiple Intelligences</span> Theory
+                Physics & Mathematics Tuition Built on <span className="text-indigo-600 italic">Multiple Intelligences</span> Theory
               </h2>
             </motion.div>
 
@@ -115,7 +120,7 @@ export default function HeroSection() {
             <motion.div variants={itemVariants}>
               <p className="text-base sm:text-lg text-slate-600 max-w-xl mx-auto lg:mx-0 leading-relaxed">
                 Led by <strong>Mr. Chew</strong> (Ex-MOE Scholar, NIE-Trained). 
-                Empowering students to excel in <strong>O/A Levels, IB, & IGCSE</strong> through strategic thinking and scientific mastery.
+                Empowering local & international students (Singapore, Malaysia, Indonesia, Hong Kong & Global) in <strong>O/A Levels, IB, IGCSE & AEIS Maths</strong> through structured online & physical lessons.
               </p>
             </motion.div>
 
@@ -123,9 +128,9 @@ export default function HeroSection() {
             <motion.div variants={itemVariants} className="flex flex-wrap justify-center lg:justify-start gap-2 sm:gap-3">
               {[ 
                 { icon: Atom, label: "Physics Tuition", color: "text-teal-600", bg: "bg-teal-50" },
+                { icon: Brain, label: "AEIS Maths Prep", color: "text-amber-600", bg: "bg-amber-50" },
                 { icon: Trophy, label: "FIDE Chess Coaching", color: "text-purple-600", bg: "bg-purple-50" },
-                { icon: Brain, label: "MI Pedagogy", color: "text-indigo-600", bg: "bg-indigo-50" },
-                { icon: GraduationCap, label: "IP/IB Specialist", color: "text-blue-600", bg: "bg-blue-50" },
+                { icon: GraduationCap, label: "IB & A-Level Specialist", color: "text-blue-600", bg: "bg-blue-50" },
               ].map((item, idx) => (
                 <div key={idx} className={`flex items-center gap-1.5 px-3 py-1.5 ${item.bg} border border-black/5 rounded-lg text-xs md:text-sm font-bold text-slate-700 whitespace-nowrap transition-transform hover:scale-105`}>
                   <item.icon size={14} className={item.color} />
@@ -138,10 +143,10 @@ export default function HeroSection() {
             <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
               <Link 
                 href="/contact" 
-                aria-label="Book a Physics or Chess Trial Class"
+                aria-label="Book a Free 45-Min Trial Class"
                 className="w-full sm:w-auto group inline-flex items-center justify-center gap-2 px-8 py-4 bg-slate-900 text-white rounded-xl font-bold text-lg shadow-xl shadow-slate-900/20 hover:bg-teal-600 hover:shadow-teal-600/30 transition-all duration-300"
               >
-                Book a Trial Class
+                Book Free Trial Lesson
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link 
