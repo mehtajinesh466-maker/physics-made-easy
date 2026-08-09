@@ -80,7 +80,7 @@ export default function OLevelCoursePage() {
     description: "Small group O-Level Physics tuition for Sec 3 and Sec 4 students in Singapore. Covers Pure Physics and Combined Science (Physics). Led by ex-MOE PSC Scholar Mr. Chew Kok Mun.",
     level: "Secondary 3 and Secondary 4",
     url: "/courses/o-level",
-    price: "90",
+    price: "0",
     priceCurrency: "SGD"
   });
 
@@ -149,7 +149,7 @@ export default function OLevelCoursePage() {
 
           <div className="flex flex-wrap justify-center gap-6 text-sm text-slate-500 font-bold mb-8">
             <span className="flex items-center gap-1.5"><MapPin size={16} className="text-teal-600" /> Toa Payoh Central</span>
-            <span className="flex items-center gap-1.5"><Clock size={16} className="text-teal-600" /> SG$90 / 2-Hour Session</span>
+            <span className="flex items-center gap-1.5"><Clock size={16} className="text-teal-600" /> 2-Hour Sessions</span>
             <span className="flex items-center gap-1.5"><Laptop size={16} className="text-teal-600" /> Online Available</span>
           </div>
 
@@ -189,9 +189,9 @@ export default function OLevelCoursePage() {
       <section className="py-12 container mx-auto px-4 md:px-8 max-w-5xl">
         <div className="bg-white p-8 md:p-12 rounded-[2.5rem] border border-slate-100 shadow-sm grid md:grid-cols-3 gap-8">
           <div className="space-y-2">
-            <span className="text-xs font-bold text-slate-400 uppercase">Fee Structure</span>
-            <p className="text-2xl font-black text-slate-900">SG$90 / session</p>
-            <p className="text-slate-500 text-xs leading-relaxed">Small group 2-hour sessions. Custom 1-on-1 tracks available.</p>
+            <span className="text-xs font-bold text-slate-400 uppercase">Class Mode</span>
+            <p className="text-base font-bold text-slate-900">Small Group / 1-to-1</p>
+            <p className="text-slate-500 text-xs leading-relaxed">Custom 1-on-1 tracks available upon request.</p>
           </div>
           <div className="space-y-2">
             <span className="text-xs font-bold text-slate-400 uppercase">Physical Location</span>

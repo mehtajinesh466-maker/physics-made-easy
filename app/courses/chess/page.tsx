@@ -300,7 +300,7 @@ export default function ChessCoursePage() {
         <div className="container mx-auto px-6 max-w-xl space-y-6">
           <h2 className="text-3xl font-black text-slate-900">Enquire About Chess Coaching</h2>
           <p className="text-slate-600">
-            Enquire today for scheduling, group/individual rates, and program details.
+            Enquire today for scheduling, group/individual slots, and program details.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link

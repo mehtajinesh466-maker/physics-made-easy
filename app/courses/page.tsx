@@ -233,9 +233,6 @@ export default function CoursesPage() {
                             <Users size={12} />
                             {course.level}
                           </div>
-                          <div className="flex items-center gap-1 text-xs font-bold text-teal-600">
-                            {course.price}
-                          </div>
                       </div>
 
                       <Link href={getCourseLink(course)}>

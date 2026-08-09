@@ -605,7 +605,8 @@ export const ORGANIZATION_SCHEMA: Record<string, unknown> = {
         description: "Comprehensive O-Level Physics coaching with exam-style practice.",
         url: "https://www.makephysicseasy.com/courses",
       },
-      price: "90",
+      price: "0",
+      description: "Enquire for pricing",
       priceCurrency: "SGD",
       url: "https://www.makephysicseasy.com/courses",
       availability: "https://schema.org/InStock",
@@ -618,7 +619,8 @@ export const ORGANIZATION_SCHEMA: Record<string, unknown> = {
         description: "H2 Physics tuition for JC students targeting grade A.",
         url: "https://www.makephysicseasy.com/courses",
       },
-      price: "110",
+      price: "0",
+      description: "Enquire for pricing",
       priceCurrency: "SGD",
       url: "https://www.makephysicseasy.com/courses",
       availability: "https://schema.org/InStock",
@@ -631,7 +633,8 @@ export const ORGANIZATION_SCHEMA: Record<string, unknown> = {
         description: "IB Physics coaching for Diploma Programme students.",
         url: "https://www.makephysicseasy.com/courses",
       },
-      price: "120",
+      price: "0",
+      description: "Enquire for pricing",
       priceCurrency: "SGD",
       url: "https://www.makephysicseasy.com/courses",
       availability: "https://schema.org/InStock",
@@ -644,7 +647,8 @@ export const ORGANIZATION_SCHEMA: Record<string, unknown> = {
         description: "IGCSE and Integrated Programme Physics coaching.",
         url: "https://www.makephysicseasy.com/courses",
       },
-      price: "100",
+      price: "0",
+      description: "Enquire for pricing",
       priceCurrency: "SGD",
       url: "https://www.makephysicseasy.com/courses",
       availability: "https://schema.org/InStock",
@@ -924,7 +928,7 @@ The academy has a 5-year track record of academic transformation, with 95% of O-
 
 - [Home](https://www.makephysicseasy.com): Overview, programmes, and trial lesson booking
 - [About](https://www.makephysicseasy.com/about): Mr. Chew's profile, credentials, and teaching philosophy
-- [Courses](https://www.makephysicseasy.com/courses): Detailed programme descriptions and pricing range
+- [Courses](https://www.makephysicseasy.com/courses): Detailed programme descriptions and syllabus info
 - [Curriculum](https://www.makephysicseasy.com/curriculum): Topic-by-topic coverage and learning milestones
 - [Multiple Intelligences](https://www.makephysicseasy.com/multiple): How MI theory is applied in lessons
 - [Science Understanding](https://www.makephysicseasy.com/science): Concept-first physics approach

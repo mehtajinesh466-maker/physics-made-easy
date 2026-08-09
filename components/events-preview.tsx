@@ -208,17 +208,11 @@ export default function ProgramsSection() {
                 </h3>
               </div>
 
-              {/* Pricing & Logic */}
+              {/* Mode & Schedule Logic */}
               <div className="mb-6">
-                <div className="flex items-baseline gap-1">
-                  <span className="text-4xl font-black text-slate-900 tracking-tighter">{program.price}</span>
-                  {program.price !== "Enquire" && (
-                    <span className="text-slate-400 font-bold text-sm">/{program.duration}</span>
-                  )}
-                </div>
-                <div className="flex items-center gap-2 mt-3 text-slate-500 font-bold text-xs uppercase tracking-tighter">
+                <div className="flex items-center gap-2 text-slate-500 font-bold text-xs uppercase tracking-tighter">
                   <Users size={14} className="text-indigo-500" />
-                  {program.mode}
+                  <span>{program.mode} • {program.duration === "Flexible" ? "Flexible Schedule" : `${program.duration} Sessions`}</span>
                 </div>
               </div>
 

@@ -21,6 +21,7 @@ import PeterLohMentorProfile from "@/components/advisor"
 
 import AlumniSpotlight from "@/components/alumni-spotlight"
 import GoogleReviewsWidget from "@/components/google-reviews-widget"
+import CoachCtaSection from "@/components/ui/CoachCtaSection"
 
 export default function HomePage() {
   return (
@@ -37,6 +38,7 @@ export default function HomePage() {
         <WhyChooseUsSection />
         <PhilosophySection />
         <LeadInstructorSection />
+        <CoachCtaSection/>
         <CoursesSection />
         <SuccessStories />
         <AlumniSpotlight />
