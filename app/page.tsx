@@ -20,7 +20,6 @@ import PeterLohMentorProfile from "@/components/advisor"
 
 
 import AlumniSpotlight from "@/components/alumni-spotlight"
-import GoogleReviewsWidget from "@/components/google-reviews-widget"
 import CoachCtaSection from "@/components/ui/CoachCtaSection"
 
 export default function HomePage() {
@@ -43,7 +42,6 @@ export default function HomePage() {
         <SuccessStories />
         <AlumniSpotlight />
         <TestimonialsSection />
-        <GoogleReviewsWidget trustindexScript="https://cdn.trustindex.io/loader.js?351328e78efe065f0c46084ef79" />
         <ResourcesSection />
         <GallerySection />
         <FaqSection />

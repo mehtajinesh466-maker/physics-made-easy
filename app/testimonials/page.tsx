@@ -25,7 +25,6 @@ import {
   Sparkles
 } from "lucide-react";
 import AlumniSpotlight from "@/components/alumni-spotlight";
-import GoogleReviewsWidget from "@/components/google-reviews-widget";
 
 const caseStudies = [
   {
@@ -272,9 +271,6 @@ export default function TestimonialsPage() {
           ))}
         </div>
       </section>
-
-      {/* Free Google Reviews Widget Integration */}
-      <GoogleReviewsWidget trustindexScript="https://cdn.trustindex.io/loader.js?351328e78efe065f0c46084ef79" />
 
       {/* Schools List */}
       <section className="py-16 container mx-auto px-4 md:px-8 max-w-4xl text-center">
