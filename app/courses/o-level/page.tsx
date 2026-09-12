@@ -249,7 +249,7 @@ export default function OLevelCoursePage() {
       <section className="py-16 bg-indigo-950 text-white">
         <div className="container mx-auto px-4 md:px-8 max-w-4xl text-center space-y-6">
           <span className="text-teal-400 font-bold uppercase tracking-wider text-xs block">Student Success Timeline</span>
-          <h2 className="text-3xl font-black">A Student's Journey: From C6 to A1</h2>
+          <h2 className="text-3xl font-black">From C6 to A1: A Real Student&apos;s O-Level Physics Journey</h2>
           <p className="text-slate-350 text-sm md:text-base leading-relaxed max-w-2xl mx-auto">
             One of our O-Level students joined at the start of Secondary 4, scoring a C6 in the school's mid-year examination. She was not a weak student — she had strong linguistic skills — but she had never been taught to translate those skills into physics reasoning.
           </p>

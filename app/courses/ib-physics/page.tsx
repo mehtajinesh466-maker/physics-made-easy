@@ -261,6 +261,122 @@ export default function IBPhysicsCoursePage() {
         </div>
       </section>
 
+      {/* Schools We Serve Section */}
+      <section className="py-16 bg-slate-100 border-y border-slate-200">
+        <div className="container mx-auto px-4 md:px-8 max-w-5xl">
+          <div className="text-center mb-10">
+            <span className="text-xs font-bold uppercase tracking-widest text-cyan-700 bg-cyan-50 border border-cyan-200 px-3 py-1 rounded-full">
+              Targeted School Support
+            </span>
+            <h2 className="text-3xl font-black text-slate-900 mt-3 mb-3">
+              Schools We Serve
+            </h2>
+            <p className="text-slate-600 max-w-2xl mx-auto text-sm md:text-base font-medium">
+              We provide tailored IB Physics tuition matching the internal assessment pacing and practical exam requirements of leading IB World Schools across Singapore:
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {[
+              { name: "Hwa Chong International School", code: "HCIS" },
+              { name: "Singapore American School", code: "SAS" },
+              { name: "Furen International School", code: "FIS" },
+              { name: "United World College SEA", code: "UWC" },
+              { name: "Anglo-Chinese School (Independent)", code: "ACSI" },
+              { name: "St. Joseph's Institution", code: "SJI" },
+              { name: "SOTA & Overseas IB Schools", code: "IB DP" },
+              { name: "Global Online IB Students", code: "Worldwide" }
+            ].map((school, i) => (
+              <div key={i} className="p-4 rounded-2xl bg-white border border-slate-200 shadow-xs flex flex-col justify-between hover:border-cyan-400 transition-colors">
+                <span className="text-xs font-black text-cyan-600 uppercase tracking-wider">{school.code}</span>
+                <p className="font-bold text-slate-800 text-sm mt-1">{school.name}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Dedicated IA & EE Mentorship Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 md:px-8 max-w-5xl space-y-12">
+          
+          <div className="text-center max-w-3xl mx-auto space-y-3">
+            <h2 className="text-3xl md:text-4xl font-black text-slate-900">
+              Specialised Portfolio Guidance: IA & EE Mentorship
+            </h2>
+            <p className="text-slate-600 font-medium">
+              The Physics Internal Assessment (IA) and Extended Essay (EE) account for critical portions of your IB diploma score. We guide students through a structured, examiner-compliant process.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            
+            {/* IB Internal Assessment (IA) Mentorship */}
+            <div className="bg-slate-50 p-8 rounded-[2rem] border border-slate-200 space-y-5">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-100 text-cyan-800 text-xs font-bold uppercase tracking-wider">
+                20% of IB Diploma Grade
+              </div>
+              <h3 className="text-2xl font-black text-slate-900">
+                IB Internal Assessment (IA) Mentorship
+              </h3>
+              <p className="text-slate-600 text-sm leading-relaxed">
+                Our IA mentorship framework takes students from initial brainstorm to final submission, ensuring full alignment with IB criterion markschemes.
+              </p>
+              <ul className="space-y-3 text-slate-700 text-sm font-semibold">
+                <li className="flex items-start gap-2.5">
+                  <CheckCircle className="text-cyan-600 w-5 h-5 shrink-0 mt-0.5" />
+                  <span><strong>Research Question Formulation:</strong> Crafting focused, original physics questions that allow for deep analytical evaluation.</span>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <CheckCircle className="text-cyan-600 w-5 h-5 shrink-0 mt-0.5" />
+                  <span><strong>Experimental Design & Data Collection:</strong> Designing controlled variables, apparatus setup, and high-precision data gathering.</span>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <CheckCircle className="text-cyan-600 w-5 h-5 shrink-0 mt-0.5" />
+                  <span><strong>Uncertainty Propagation & Graphing:</strong> Error analysis, percentage uncertainties, max/min slope gradient calculations.</span>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <CheckCircle className="text-cyan-600 w-5 h-5 shrink-0 mt-0.5" />
+                  <span><strong>Evaluation & Conclusion Writing:</strong> Addressing systematic errors, methodological limitations, and realistic physics extensions.</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Extended Essay (EE) Support */}
+            <div className="bg-slate-900 text-white p-8 rounded-[2rem] shadow-xl space-y-5">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-900 text-indigo-300 text-xs font-bold uppercase tracking-wider border border-indigo-700">
+                Core Diploma Requirement
+              </div>
+              <h3 className="text-2xl font-black text-white">
+                Extended Essay (EE) Support in Physics
+              </h3>
+              <p className="text-slate-300 text-sm leading-relaxed">
+                Writing a 4,000-word Physics Extended Essay requires rigorous theoretical framing and academic methodology.
+              </p>
+              <ul className="space-y-3 text-slate-200 text-sm font-medium">
+                <li className="flex items-start gap-2.5">
+                  <CheckCircle className="text-teal-400 w-5 h-5 shrink-0 mt-0.5" />
+                  <span><strong>Topic Selection & Feasibility Analysis:</strong> Choosing viable physics research areas with accessible data models.</span>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <CheckCircle className="text-teal-400 w-5 h-5 shrink-0 mt-0.5" />
+                  <span><strong>Literature Review & Secondary Data Modeling:</strong> Academic paper synthesis, simulation modeling, and theoretical derivation.</span>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <CheckCircle className="text-teal-400 w-5 h-5 shrink-0 mt-0.5" />
+                  <span><strong>Structural & Academic Rigor:</strong> Organizing complex physics derivations, vector diagrams, and formal citations.</span>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <CheckCircle className="text-teal-400 w-5 h-5 shrink-0 mt-0.5" />
+                  <span><strong>Viva Voce & Defense Preparation:</strong> Reflection sessions to help students confidently defend their EE research methodology.</span>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
       {/* The MI Advantage in IB Physics */}
       <section className="py-16 bg-indigo-950 text-white">
         <div className="container mx-auto px-4 md:px-8 max-w-4xl text-center space-y-6">

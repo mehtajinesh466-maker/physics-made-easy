@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { 
   CheckCircle2, 
@@ -14,10 +14,33 @@ import {
   FileCheck,
   Globe,
   Lock,
-  ShieldCheck
+  ShieldCheck,
+  HelpCircle,
+  ChevronDown
 } from "lucide-react";
 
+const faqs = [
+  {
+    question: "What subjects are tested in AEIS?",
+    answer: "The AEIS examination tests English literacy and Mathematics. For Mathematics, candidates are evaluated on numerical reasoning, algebraic problem-solving, geometry, and Singapore MOE curriculum-aligned word problems appropriate for their target entry grade."
+  },
+  {
+    question: "When is the AEIS exam?",
+    answer: "The AEIS (Admissions Exercise for International Students) examination is held annually in September or October for admission in January of the following academic year. The S-AEIS (Supplementary AEIS) is conducted in February or March for mid-year entry in April."
+  },
+  {
+    question: "What level will my child enter?",
+    answer: "MOE places successful candidates into Primary 2 to 5 or Secondary 1 to 3 based on their AEIS performance, age suitability, and school vacancy availability across Singapore government schools."
+  }
+];
+
 export default function AEISMathsPage() {
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
+
+  const toggleFaq = (index: number) => {
+    setOpenFaq(openFaq === index ? null : index);
+  };
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Course",
@@ -28,6 +51,19 @@ export default function AEISMathsPage() {
       "name": "Physics Made Easy",
       "sameAs": "https://www.makephysicseasy.com"
     }
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map((faq) => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
   };
 
   return (
@@ -259,6 +295,47 @@ export default function AEISMathsPage() {
               </ul>
             </div>
 
+          </div>
+        </div>
+      </section>
+
+      {/* --- FAQ SECTION --- */}
+      <section className="py-16 bg-white">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+        <div className="container mx-auto px-4 md:px-8 max-w-3xl">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-black text-slate-900 mb-4 flex items-center justify-center gap-2">
+              <HelpCircle className="text-teal-600" />
+              Frequently Asked Questions (AEIS Parent Guide)
+            </h2>
+            <p className="text-slate-600 font-medium">Key insights parents need to know about the Singapore AEIS exam</p>
+          </div>
+
+          <div className="space-y-4">
+            {faqs.map((faq, i) => (
+              <div
+                key={i}
+                className="bg-slate-50 border border-slate-200 rounded-xl overflow-hidden shadow-xs"
+              >
+                <button
+                  onClick={() => toggleFaq(i)}
+                  className="w-full flex items-center justify-between p-5 text-left font-bold text-slate-800 hover:text-teal-700 transition-colors"
+                >
+                  <span className="text-base">{faq.question}</span>
+                  <ChevronDown
+                    className={`w-5 h-5 text-slate-400 transition-transform duration-200 shrink-0 ${openFaq === i ? "rotate-180 text-teal-600" : ""}`}
+                  />
+                </button>
+                {openFaq === i && (
+                  <div className="p-5 pt-0 text-slate-600 border-t border-slate-200 bg-white leading-relaxed text-sm">
+                    {faq.answer}
+                  </div>
+                )}
+              </div>
+            ))}
           </div>
         </div>
       </section>

@@ -21,6 +21,7 @@ import {
   Target
 } from "lucide-react";
 import { getCourseSchema } from "@/config/seo-config";
+import ChessClassroomSection from "@/components/chess-classroom";
 
 const benefits = [
   { title: "Working Memory", desc: "Holding and manipulating multiple pieces of information simultaneously (directly relevant to multi-step Physics problems)." },
@@ -189,6 +190,9 @@ export default function ChessCoursePage() {
           </div>
         </div>
       </section>
+
+      {/* Real Classroom Experience Section */}
+      <ChessClassroomSection />
 
       {/* Program Levels */}
       <section className="py-16 container mx-auto px-4 md:px-8 max-w-5xl">

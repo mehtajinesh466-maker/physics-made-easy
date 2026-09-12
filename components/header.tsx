@@ -85,8 +85,10 @@ const Header: React.FC = () => {
         { name: "A-Level H2 Physics", href: "/courses/a-level" },
         { name: "IB Physics Specialist", href: "/courses/ib-physics" },
         { name: "AEIS Mathematics Prep", href: "/courses/aeis-maths" },
+        { name: "Chess Strategy Coaching", href: "/courses/chess" },
       ],
     },
+    { name: "Chess", href: "/courses/chess" },
     {
       name: "Methodology",
       href: "/methodology",

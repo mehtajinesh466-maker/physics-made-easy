@@ -572,10 +572,31 @@ export const ORGANIZATION_SCHEMA: Record<string, unknown> = {
   founder: {
     "@type": "Person",
     name: "Mr. Chew Kok Mun",
-    jobTitle: "Physics Tutor & Founder",
+    jobTitle: "Lead Physics Instructor & Founder",
     description:
-      "Ex-MOE scholar and FIDE-certified chess instructor with a Master's degree from Heriot-Watt University. Founder of Physics Made Easy Academy in Singapore.",
-    alumniOf: "Heriot-Watt University",
+      "Ex-MOE PSC Scholar, NIE-trained educator with NUS Math & English minors and Master's degree from Edinburgh Business School / Heriot-Watt University. Founder of Physics Made Easy in Singapore.",
+    alumniOf: [
+      {
+        "@type": "EducationalOrganization",
+        name: "National University of Singapore",
+        alternateName: "NUS"
+      },
+      {
+        "@type": "EducationalOrganization",
+        name: "National Institute of Education",
+        alternateName: "NIE Singapore"
+      },
+      {
+        "@type": "EducationalOrganization",
+        name: "University of Edinburgh",
+        alternateName: "Edinburgh Business School"
+      }
+    ],
+    award: [
+      "MOE PSC Teaching Scholarship",
+      "FIDE International Chess Instructor Certification",
+      "Ex-MOE Senior Physics Educator Recognition"
+    ],
     knowsAbout: [
       "GCE O-Level Physics",
       "A-Level H2 Physics",

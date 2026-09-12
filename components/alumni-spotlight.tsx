@@ -44,12 +44,12 @@ export default function AlumniSpotlight() {
               <div className="relative group w-full max-w-[220px] sm:max-w-[240px] rounded-2xl overflow-hidden border-2 border-slate-200 shadow-md bg-slate-950 transition-transform hover:scale-[1.02]">
                 <img 
                   src="/dr-m-testimonial.png" 
-                  alt="WhatsApp testimonial from Dr. M to Mr. Chew" 
+                  alt="WhatsApp testimonial from Dr Marie to Mr. Chew" 
                   className="w-full max-h-[300px] object-contain bg-slate-950"
                 />
                 <div className="absolute inset-x-0 bottom-0 bg-slate-950/80 backdrop-blur-xs px-2.5 py-1 flex items-center justify-between text-[10px] text-teal-300 font-bold">
                   <span className="flex items-center gap-1"><CheckCircle2 size={10} /> Verified Note</span>
-                  <span>Dr. M (NUS PhD)</span>
+                  <span>Dr Marie (NUS PhD)</span>
                 </div>
               </div>
             </div>
@@ -61,12 +61,12 @@ export default function AlumniSpotlight() {
               <blockquote className="text-slate-800 text-base md:text-lg font-bold leading-relaxed bg-slate-50 p-4 rounded-xl border border-slate-200/70">
                 &ldquo;You are a great tutor and your patient explanation helps a lot in my understanding of Physics concepts. I completed my PhD in Mechanical Engineering from NUS...&rdquo;
                 <footer className="mt-2 text-xs font-semibold text-teal-700 not-italic">
-                  &mdash; Message from former student Dr. M to Mr. Chew
+                  &mdash; Message from former student Dr Marie to Mr. Chew
                 </footer>
               </blockquote>
 
               <p className="text-slate-600 text-xs md:text-sm leading-relaxed font-medium">
-                After mastering Physics under Mr. Chew, Dr. M spent <strong>10 years at NUS</strong> (4 yrs UG, 2 yrs Master&apos;s, 4 yrs PhD in Mechanical Engineering) and is now following in his footsteps as an educator.
+                After mastering Physics under Mr. Chew, Dr Marie spent <strong>10 years at NUS</strong> (4 yrs UG, 2 yrs Master&apos;s, 4 yrs PhD in Mechanical Engineering) and she is now following in his footsteps as an educator.
               </p>
 
               {/* 3 Compact Metrics */}
