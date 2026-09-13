@@ -83,13 +83,24 @@ const AboutSection: React.FC = () => {
             </h2>
 
             {/* Description Text */}
-            <div className="space-y-6 text-slate-600 text-lg leading-relaxed mb-8">
+            <div className="space-y-6 text-slate-600 text-lg leading-relaxed mb-6">
               <p>
                 Founded by <strong className="text-slate-900">Mr. Cornelius Chew</strong> (Ex-MOE Scholar), we are not just another tuition center. We fuse the academic rigor of Physics with the strategic discipline of International Chess.
               </p>
               <p>
                 Using the <strong className="text-slate-900">Multiple Intelligences (MI)</strong> theory, we customize learning to fit your child's unique cognitive profile—whether they are "Number Smart," "Picture Smart," or "People Smart."
               </p>
+            </div>
+
+            {/* Mission Statement Box */}
+            <div className="p-6 rounded-3xl bg-slate-900 text-white space-y-3 relative overflow-hidden border border-slate-800 shadow-xl mb-8">
+              <div className="flex items-center gap-2">
+                <Quote className="w-5 h-5 text-teal-400" />
+                <span className="text-[10px] font-black uppercase tracking-[0.2em] text-teal-400">Our Mission</span>
+              </div>
+              <blockquote className="text-sm md:text-base font-semibold leading-relaxed text-slate-100 italic">
+                &ldquo;Teaching is one of the few careers where your values become your daily actions. You don&rsquo;t wait years to matter—you matter immediately.&rdquo;
+              </blockquote>
             </div>
 
             {/* Feature List */}

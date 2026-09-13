@@ -26,6 +26,7 @@ import {
   Sparkles
 } from "lucide-react";
 import { getFAQSchema } from "@/config/seo-config";
+import MissionStatement from "@/components/mission-statement";
 
 // FAQ Data
 const faqs = [
@@ -192,6 +193,11 @@ export default function MethodologyPage() {
             animation: bounce-slow 4s ease-in-out infinite;
           }
         `}</style>
+      </section>
+
+      {/* Mission Statement Callout */}
+      <section className="pt-12 pb-4 container mx-auto px-4 md:px-8 max-w-5xl">
+        <MissionStatement />
       </section>
 
       {/* Main Philosophy Introduction */}

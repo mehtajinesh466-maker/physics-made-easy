@@ -20,8 +20,16 @@ import {
   Home,
   ChevronRight,
   Atom,
-  Target
+  Target,
+  ExternalLink,
+  PlayCircle
 } from "lucide-react";
+
+const TikTokIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
+  <svg className={className} fill="currentColor" viewBox="0 0 24 24">
+    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.29 0 .58.04.85.12V9.4a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.66a6.34 6.34 0 0 0 10.86 4.47V13a8.28 8.28 0 0 0 5.73 2.25V11.8a4.84 4.84 0 0 1-3.77-1.34 4.8 4.8 0 0 1-1.23-3.77V6.69z"/>
+  </svg>
+);
 
 const resources = [
   {
@@ -51,6 +59,14 @@ const resources = [
     icon: Award,
     color: "bg-amber-50 text-amber-600 border-amber-100",
     actionText: "Access Chess Tutorials"
+  },
+  {
+    title: "Teaching Insights on TikTok",
+    desc: "Bite-sized video lessons & educational philosophy breakdowns. Discover why values become daily actions in physics education.",
+    icon: PlayCircle,
+    color: "bg-pink-50 text-pink-600 border-pink-100",
+    actionText: "Watch on TikTok",
+    url: "https://vt.tiktok.com/ZSqHPNHgN/"
   }
 ];
 
@@ -177,8 +193,44 @@ export default function ResourcesPage() {
         `}</style>
       </section>
 
+      {/* Featured TikTok Video Banner */}
+      <section className="pt-12 pb-4 container mx-auto px-4 md:px-8 max-w-6xl">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="p-6 md:p-8 rounded-[2.5rem] bg-gradient-to-r from-slate-950 via-slate-900 to-slate-950 text-white border border-slate-800 shadow-2xl relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-6"
+        >
+          <div className="flex items-center gap-5">
+            <div className="w-16 h-16 rounded-2xl bg-gradient-to-tr from-cyan-500 to-pink-500 flex items-center justify-center text-white shrink-0 shadow-lg shadow-cyan-500/20">
+              <TikTokIcon className="w-8 h-8" />
+            </div>
+            <div>
+              <div className="inline-flex items-center gap-2 px-3 py-0.5 rounded-full bg-pink-500/10 text-pink-400 text-[10px] font-black uppercase tracking-widest border border-pink-500/20 mb-2">
+                <PlayCircle size={12} /> Featured TikTok Video
+              </div>
+              <h3 className="text-xl md:text-2xl font-black text-white">
+                Teaching & Values in Action
+              </h3>
+              <p className="text-slate-400 text-sm md:text-base font-medium mt-1 max-w-xl">
+                &ldquo;Teaching is one of the few careers where your values become your daily actions. You don&rsquo;t wait years to matter—you matter immediately.&rdquo;
+              </p>
+            </div>
+          </div>
+          <a
+            href="https://vt.tiktok.com/ZSqHPNHgN/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-6 py-4 rounded-2xl bg-gradient-to-r from-cyan-500 to-pink-500 hover:from-cyan-400 hover:to-pink-400 text-white font-black text-xs uppercase tracking-widest flex items-center gap-2 shrink-0 transition-all shadow-lg hover:scale-105 active:scale-95"
+          >
+            <span>Watch on TikTok</span>
+            <ExternalLink size={16} />
+          </a>
+        </motion.div>
+      </section>
+
       {/* Grid of Resources */}
-      <section className="py-16 container mx-auto px-4 md:px-8 max-w-6xl">
+      <section className="py-12 container mx-auto px-4 md:px-8 max-w-6xl">
         <div className="grid md:grid-cols-2 gap-8">
           {resources.map((res, i) => (
             <div key={i} className="bg-white p-8 rounded-[2rem] border border-slate-100 shadow-sm flex flex-col justify-between hover:shadow-md transition-all">
@@ -190,12 +242,23 @@ export default function ResourcesPage() {
                 <p className="text-slate-600 text-sm leading-relaxed">{res.desc}</p>
               </div>
               <div className="pt-6 mt-6 border-t border-slate-50">
-                <Link
-                  href="/study"
-                  className="inline-flex items-center gap-1.5 font-bold text-sm text-teal-600 hover:text-teal-700"
-                >
-                  {res.actionText} <ArrowRight size={16} />
-                </Link>
+                {res.url ? (
+                  <a
+                    href={res.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 font-bold text-sm text-pink-600 hover:text-pink-700"
+                  >
+                    {res.actionText} <ExternalLink size={16} />
+                  </a>
+                ) : (
+                  <Link
+                    href="/study"
+                    className="inline-flex items-center gap-1.5 font-bold text-sm text-teal-600 hover:text-teal-700"
+                  >
+                    {res.actionText} <ArrowRight size={16} />
+                  </Link>
+                )}
               </div>
             </div>
           ))}

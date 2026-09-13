@@ -11,7 +11,8 @@ import {
   UserCheck,      
   ArrowRight,
   Sparkles,
-  Zap
+  Zap,
+  Quote
 } from "lucide-react";
 
 export default function PhilosophySection() {
@@ -131,6 +132,17 @@ export default function PhilosophySection() {
             <p className="text-lg text-slate-600 leading-relaxed max-w-lg">
               Education isn&apos;t just content delivery—it&apos;s about building a robust mental architecture. Our methodology bridges <strong>Physics rigor</strong> with <strong>Chess foresight</strong> to develop world-class problem solvers.
             </p>
+
+            {/* Mission Statement Box */}
+            <div className="p-6 rounded-3xl bg-slate-900 text-white space-y-3 relative overflow-hidden border border-slate-800 shadow-xl">
+              <div className="flex items-center gap-2">
+                <Quote className="w-5 h-5 text-teal-400" />
+                <span className="text-[10px] font-black uppercase tracking-[0.2em] text-teal-400">Our Mission</span>
+              </div>
+              <blockquote className="text-sm md:text-base font-semibold leading-relaxed text-slate-100 italic">
+                &ldquo;Teaching is one of the few careers where your values become your daily actions. You don&rsquo;t wait years to matter—you matter immediately.&rdquo;
+              </blockquote>
+            </div>
 
             <div className="pt-2">
               <Link href="/multiple">
