@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 import type { Metadata } from "next";
 import { buildBlogPostMetadata } from "@/lib/seo";
+import { getBlogPostSchema, getBreadcrumbSchema } from "@/config/seo-config";
 
 interface Props {
   params: {
@@ -47,8 +48,31 @@ export default async function BlogDetailPage({ params }: Props) {
     .filter((p: any) => p.slug !== post.slug && p.category === post.category)
     .slice(0, 2);
 
+  const articleSchema = getBlogPostSchema({
+    title: post.title,
+    description: post.excerpt,
+    slug: post.slug,
+    publishedAt: post.date ? new Date(post.date).toISOString() : new Date().toISOString(),
+    author: "Mr. Chew Kok Mun",
+    image: post.image,
+  });
+
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: "Home", url: "/" },
+    { name: "Blog", url: "/blog" },
+    { name: post.title, url: `/blog/${post.slug}` },
+  ]);
+
   return (
     <main className="bg-white min-h-screen font-sans pb-20">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       
       {/* --- ARTICLE HEADER / HERO --- */}
       <section className="relative pt-32 pb-16 bg-slate-900 overflow-hidden">

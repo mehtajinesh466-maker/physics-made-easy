@@ -12,6 +12,14 @@ if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma
    COURSES
    ========================================================================== */
 
+export function triggerSitemapRevalidation() {
+  try {
+    revalidatePath('/sitemap.xml')
+  } catch (err) {
+    console.error("Revalidation error:", err)
+  }
+}
+
 export async function addCourse(formData: FormData) {
   const title = formData.get('title') as string
   const category = formData.get('category') as string
@@ -27,6 +35,7 @@ export async function addCourse(formData: FormData) {
   })
   
   revalidatePath('/courses')
+  triggerSitemapRevalidation()
 }
 
 // ✅ NEW: Edit Course Function
@@ -49,6 +58,7 @@ export async function editCourse(id: number, formData: FormData) {
   })
 
   revalidatePath('/courses')
+  triggerSitemapRevalidation()
 }
 
 export async function getCourses() {
@@ -58,6 +68,7 @@ export async function getCourses() {
 export async function deleteCourse(id: number) {
   await prisma.course.delete({ where: { id } })
   revalidatePath('/courses')
+  triggerSitemapRevalidation()
 }
 
 /* ==========================================================================
@@ -122,6 +133,8 @@ export async function addBlogPost(formData: FormData) {
   })
   
   revalidatePath('/blog')
+  revalidatePath(`/blog/${slug}`)
+  triggerSitemapRevalidation()
 }
 
 // ✅ NEW: Edit Blog Function
@@ -136,12 +149,14 @@ export async function editBlogPost(id: number, formData: FormData) {
   const dataToUpdate: any = { title, excerpt, category, readTime, content }
   if (image) dataToUpdate.image = image
 
-  await prisma.blogPost.update({
+  const updated = await prisma.blogPost.update({
     where: { id },
     data: dataToUpdate
   })
 
   revalidatePath('/blog')
+  revalidatePath(`/blog/${updated.slug}`)
+  triggerSitemapRevalidation()
 }
 
 export async function getBlogPosts() {
@@ -151,6 +166,7 @@ export async function getBlogPosts() {
 export async function deleteBlogPost(id: number) {
   await prisma.blogPost.delete({ where: { id } })
   revalidatePath('/blog')
+  triggerSitemapRevalidation()
 }
 
 // ... existing imports

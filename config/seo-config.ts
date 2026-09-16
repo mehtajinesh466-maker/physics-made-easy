@@ -834,6 +834,12 @@ export function getBlogPostSchema(post: {
   author: string;
   image?: string;
 }): Record<string, unknown> {
+  const imageUrl = post.image
+    ? post.image.startsWith("http")
+      ? post.image
+      : `${SITE_CONFIG.domain}${post.image.startsWith("/") ? post.image : `/${post.image}`}`
+    : `${SITE_CONFIG.domain}${SITE_CONFIG.defaultOgImage}`;
+
   return {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -845,7 +851,7 @@ export function getBlogPostSchema(post: {
     ...(post.modifiedAt ? { dateModified: post.modifiedAt } : {}),
     author: {
       "@type": "Person",
-      name: post.author,
+      name: post.author || "Mr. Chew Kok Mun",
       url: `${SITE_CONFIG.domain}/about`,
     },
     publisher: {
@@ -861,15 +867,32 @@ export function getBlogPostSchema(post: {
       "@type": "WebPage",
       "@id": `${SITE_CONFIG.domain}/blog/${post.slug}`,
     },
-    ...(post.image
-      ? {
-          image: post.image.startsWith("http")
-            ? post.image
-            : `${SITE_CONFIG.domain}${post.image}`,
-        }
-      : {}),
+    image: imageUrl,
   };
 }
+
+export function getBlogListSchema(
+  posts: Array<{ title: string; slug: string; date?: string | Date; excerpt?: string }>
+): Record<string, unknown> {
+  return {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: "Physics Blog & Exam Tips",
+    description:
+      "Exam strategies, concept explainers, and study tips from Mr. Chew for O-Level, A-Level, and IB Physics students in Singapore.",
+    url: `${SITE_CONFIG.domain}/blog`,
+    mainEntity: {
+      "@type": "ItemList",
+      itemListElement: posts.map((post, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        url: `${SITE_CONFIG.domain}/blog/${post.slug}`,
+        name: post.title,
+      })),
+    },
+  };
+}
+
 
 /* ------------------------------------------------------------------ */
 /*  Homepage FAQs (rich results)                                        */
