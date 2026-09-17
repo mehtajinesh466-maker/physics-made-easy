@@ -117,7 +117,7 @@ const Header: React.FC = () => {
             : "relative bg-white py-5"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between">
+        <div className="max-w-8xl mx-auto px-4 md:px-8 flex items-center justify-between">
           
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">

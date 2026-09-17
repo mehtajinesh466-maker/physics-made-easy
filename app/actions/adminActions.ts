@@ -12,7 +12,7 @@ if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma
    COURSES
    ========================================================================== */
 
-export function triggerSitemapRevalidation() {
+export async function triggerSitemapRevalidation() {
   try {
     revalidatePath('/sitemap.xml')
   } catch (err) {
