@@ -114,6 +114,18 @@ export async function deleteGalleryImage(id: number) {
    BLOGS
    ========================================================================== */
 
+function slugify(text: string): string {
+  if (!text) return "";
+  return text
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-z0-9\s-]/g, "")
+    .trim()
+    .replace(/\s+/g, "-")
+    .replace(/-+/g, "-");
+}
+
 export async function addBlogPost(formData: FormData) {
   const title = formData.get('title') as string
   const excerpt = formData.get('excerpt') as string
@@ -121,7 +133,7 @@ export async function addBlogPost(formData: FormData) {
   const category = formData.get('category') as string
   const readTime = formData.get('readTime') as string
   const content = formData.get('content') as string
-  const slug = title.toLowerCase().replace(/ /g, '-')
+  const slug = slugify(title) || title.toLowerCase().replace(/ /g, '-')
 
   await prisma.blogPost.create({
     data: { title, excerpt, content, category, readTime, image, slug }
@@ -143,6 +155,7 @@ export async function editBlogPost(id: number, formData: FormData) {
   const image = formData.get('image') as string
   const dataToUpdate: any = { title, excerpt, category, readTime, content }
   if (image) dataToUpdate.image = image
+  if (title) dataToUpdate.slug = slugify(title)
 
   const updated = await prisma.blogPost.update({
     where: { id },
@@ -175,10 +188,42 @@ export async function getBlogPostSummaries() {
   })
 }
 
-export async function getBlogPostBySlug(slug: string) {
-  return await prisma.blogPost.findUnique({
-    where: { slug }
-  })
+export async function getBlogPostBySlug(rawSlug: string) {
+  if (!rawSlug) return null;
+  const decodedSlug = decodeURIComponent(rawSlug);
+
+  // 1. Exact match with raw slug parameter
+  let post = await prisma.blogPost.findUnique({
+    where: { slug: rawSlug }
+  });
+  if (post) return post;
+
+  // 2. Exact match with decoded slug
+  if (rawSlug !== decodedSlug) {
+    post = await prisma.blogPost.findUnique({
+      where: { slug: decodedSlug }
+    });
+    if (post) return post;
+  }
+
+  // 3. Fallback match by normalized slug or title match across database
+  const normalizedTarget = slugify(decodedSlug);
+  const posts = await prisma.blogPost.findMany({
+    select: { id: true, slug: true, title: true }
+  });
+
+  const matched = posts.find(p => 
+    p.slug === rawSlug || 
+    p.slug === decodedSlug || 
+    slugify(p.slug) === normalizedTarget ||
+    slugify(p.title) === normalizedTarget
+  );
+
+  if (matched) {
+    return await prisma.blogPost.findUnique({ where: { id: matched.id } });
+  }
+
+  return null;
 }
 
 export async function getRelatedBlogPostSummaries(currentSlug: string, category?: string) {

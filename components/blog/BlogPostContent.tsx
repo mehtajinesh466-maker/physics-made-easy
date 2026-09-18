@@ -23,15 +23,15 @@ export default function BlogPostContent({ content }: BlogPostContentProps) {
 
     return (
       <div 
-        className="blog-content"
+        className="blog-content leading-relaxed"
         dangerouslySetInnerHTML={{ __html: processedHtml }} 
       />
     );
   }
 
-  // Render Markdown with GFM (supports Markdown tables, lists, etc.)
+  // Render Markdown with GFM (supports Markdown tables, lists, and preserves line breaks)
   return (
-    <div className="blog-content">
+    <div className="blog-content leading-relaxed whitespace-pre-line">
       <ReactMarkdown 
         remarkPlugins={[remarkGfm]}
         components={{
