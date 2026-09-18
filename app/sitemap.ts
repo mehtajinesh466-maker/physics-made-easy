@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { SITE_CONFIG, SITEMAP_STATIC_PAGES } from "@/config/seo-config";
-import { getBlogPosts, getCourses } from "@/app/actions/adminActions";
+import { getBlogPostSummaries, getCourses } from "@/app/actions/adminActions";
 
 export const revalidate = 3600;
 
@@ -18,7 +18,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   let blogEntries: MetadataRoute.Sitemap = [];
   try {
-    const posts = await getBlogPosts();
+    const posts = await getBlogPostSummaries();
     blogEntries = posts.map((post) => ({
       url: `${base}/blog/${post.slug}`,
       lastModified: post.date ? new Date(post.date) : new Date(),

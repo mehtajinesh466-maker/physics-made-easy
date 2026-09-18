@@ -1,4 +1,4 @@
-import { getBlogPosts } from "@/app/actions/adminActions";
+import { getBlogPostBySlug, getRelatedBlogPostSummaries } from "@/app/actions/adminActions";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { 
@@ -14,6 +14,7 @@ import {
 import type { Metadata } from "next";
 import { buildBlogPostMetadata } from "@/lib/seo";
 import { getBlogPostSchema, getBreadcrumbSchema } from "@/config/seo-config";
+import BlogPostContent from "@/components/blog/BlogPostContent";
 
 interface Props {
   params: {
@@ -22,8 +23,7 @@ interface Props {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const posts = await getBlogPosts();
-  const post = posts.find((p: { slug: string }) => p.slug === params.slug);
+  const post = await getBlogPostBySlug(params.slug);
 
   if (!post) return { title: "Post Not Found" };
 
@@ -36,17 +36,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function BlogDetailPage({ params }: Props) {
-  const posts = await getBlogPosts();
-  const post = posts.find((p: any) => p.slug === params.slug);
+  const post = await getBlogPostBySlug(params.slug);
 
   if (!post) {
     notFound();
   }
 
-  // Calculate some related posts (optional logic)
-  const relatedPosts = posts
-    .filter((p: any) => p.slug !== post.slug && p.category === post.category)
-    .slice(0, 2);
+  // Calculate some related posts
+  const relatedPosts = await getRelatedBlogPostSummaries(post.slug, post.category);
 
   const articleSchema = getBlogPostSchema({
     title: post.title,
@@ -157,18 +154,8 @@ export default async function BlogDetailPage({ params }: Props) {
         </aside>
 
         {/* Main Article Content */}
-        <article className="flex-1 max-w-3xl mx-auto">
-          <div className="prose prose-lg prose-slate max-w-none 
-            prose-headings:text-slate-900 prose-headings:font-black
-            prose-p:text-slate-600 prose-p:leading-relaxed
-            prose-strong:text-slate-900 prose-strong:font-bold
-            prose-blockquote:border-l-teal-500 prose-blockquote:bg-slate-50 prose-blockquote:py-2 prose-blockquote:rounded-r-lg
-            prose-img:rounded-2xl prose-img:shadow-lg
-            prose-a:text-teal-600 prose-a:no-underline hover:prose-a:underline
-          ">
-            {/* If content is string/html. If it's structured, map it here */}
-            <div dangerouslySetInnerHTML={{ __html: post.content }} />
-          </div>
+        <article className="flex-1 max-w-3xl mx-auto min-w-0">
+          <BlogPostContent content={post.content} />
 
           {/* Post Footer Tags */}
           <div className="mt-16 pt-8 border-t border-slate-100 flex items-center gap-4">

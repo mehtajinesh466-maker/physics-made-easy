@@ -1,12 +1,7 @@
 'use server'
 
-import { PrismaClient } from '@prisma/client'
+import { prisma } from '@/lib/data'
 import { revalidatePath } from 'next/cache'
-
-// Best practice: Use a global singleton for Prisma in dev to avoid connection limit errors
-const globalForPrisma = global as unknown as { prisma: PrismaClient }
-const prisma = globalForPrisma.prisma || new PrismaClient()
-if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma
 
 /* ==========================================================================
    COURSES
@@ -161,6 +156,50 @@ export async function editBlogPost(id: number, formData: FormData) {
 
 export async function getBlogPosts() {
   return await prisma.blogPost.findMany({ orderBy: { date: 'desc' } })
+}
+
+export async function getBlogPostSummaries() {
+  return await prisma.blogPost.findMany({
+    orderBy: { date: 'desc' },
+    select: {
+      id: true,
+      title: true,
+      excerpt: true,
+      category: true,
+      readTime: true,
+      image: true,
+      slug: true,
+      featured: true,
+      date: true,
+    }
+  })
+}
+
+export async function getBlogPostBySlug(slug: string) {
+  return await prisma.blogPost.findUnique({
+    where: { slug }
+  })
+}
+
+export async function getRelatedBlogPostSummaries(currentSlug: string, category?: string) {
+  return await prisma.blogPost.findMany({
+    where: {
+      slug: { not: currentSlug },
+      ...(category ? { category } : {})
+    },
+    take: 2,
+    orderBy: { date: 'desc' },
+    select: {
+      id: true,
+      title: true,
+      excerpt: true,
+      category: true,
+      readTime: true,
+      image: true,
+      slug: true,
+      date: true,
+    }
+  })
 }
 
 export async function deleteBlogPost(id: number) {

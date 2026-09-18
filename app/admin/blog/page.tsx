@@ -39,11 +39,13 @@ export default function BlogAdmin() {
 
   const modules = {
     toolbar: [
-      [{ 'header': 1 }, { 'header': 2 }, { 'header': 3 }],
+      [{ 'header': [1, 2, 3, false] }],
       ['bold', 'italic', 'underline', 'strike'],
+      [{ 'color': [] }, { 'background': [] }],
+      [{ 'align': [] }],
       [{ 'list': 'ordered'}, { 'list': 'bullet' }],
       ['blockquote', 'code-block'],
-      ['link', 'image'],
+      ['link', 'image', 'video'],
       ['clean']
     ],
   };
@@ -51,9 +53,11 @@ export default function BlogAdmin() {
   const formats = [
     'header',
     'bold', 'italic', 'underline', 'strike',
+    'color', 'background',
+    'align',
     'list', 'bullet',
     'blockquote', 'code-block',
-    'link', 'image'
+    'link', 'image', 'video'
   ];
 
   // Initial Data Fetch
