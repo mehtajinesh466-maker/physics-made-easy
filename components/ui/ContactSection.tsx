@@ -111,14 +111,14 @@ const ContactSection: React.FC = () => {
                <div className="relative z-10 flex-grow">
                   <h3 className="text-2xl font-black mb-8 tracking-tight">Support Hub</h3>
                   
-                  <div className="space-y-6">
+                   <div className="space-y-6">
                      {/* Phone/WA */}
                      <a href="https://wa.me/6597277419" className="flex items-center gap-5 group cursor-pointer">
                         <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover:bg-teal-500 transition-all">
                            <Smartphone className="w-5 h-5 text-teal-400 group-hover:text-white" />
                         </div>
                         <div>
-                           <p className="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-1">WhatsApp / Call</p>
+                           <p className="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-0.5">WhatsApp / Call</p>
                            <p className="text-lg font-bold group-hover:text-teal-400 transition-colors">+65 9727 7419</p>
                         </div>
                      </a>
@@ -129,21 +129,37 @@ const ContactSection: React.FC = () => {
                            <Mail className="w-5 h-5 text-indigo-400 group-hover:text-white" />
                         </div>
                         <div>
-                           <p className="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-1">Email Enquiries</p>
-                           <p className="text-lg font-bold group-hover:text-indigo-400 transition-colors break-all">chewkm2001@yahoo.com</p>
+                           <p className="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-0.5">Email Enquiries</p>
+                           <p className="text-sm font-bold group-hover:text-indigo-400 transition-colors break-all">chewkm2001@yahoo.com</p>
                         </div>
                      </a>
 
-                     {/* Location */}
-                     <div className="flex items-center gap-5 group">
-                        <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center shrink-0">
-                           <MapPin className="w-5 h-5 text-slate-400" />
+                     {/* Location 1: Main Center */}
+                     <div className="flex items-start gap-5 group">
+                        <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center shrink-0 mt-1">
+                           <MapPin className="w-5 h-5 text-teal-400" />
                         </div>
                         <div>
-                           <p className="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-1">Main Center</p>
+                           <p className="text-[10px] font-black text-teal-400 uppercase tracking-widest mb-0.5">Central Hub (Toa Payoh)</p>
                            <p className="text-sm font-bold text-slate-300 leading-snug">
-                              186 Toa Payoh Central, <br /> Lobby H 02-430, Singapore
+                              186 Toa Payoh Central, <br /> Lobby H 02-430, Singapore 310186
                            </p>
+                        </div>
+                     </div>
+
+                     {/* Location 2: Beauty World */}
+                     <div className="flex items-start gap-5 group">
+                        <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center shrink-0 mt-1">
+                           <MapPin className="w-5 h-5 text-indigo-400" />
+                        </div>
+                        <div>
+                           <p className="text-[10px] font-black text-indigo-400 uppercase tracking-widest mb-0.5">West Branch (Beauty World)</p>
+                           <p className="text-sm font-bold text-slate-300 leading-snug">
+                              Beauty World Shopping Centre, <br /> Upper Bukit Timah Road, Singapore
+                           </p>
+                           <span className="inline-block mt-1.5 text-[11px] font-bold text-indigo-300 bg-indigo-500/20 border border-indigo-500/30 px-2 py-0.5 rounded">
+                              Classes in the West of Singapore
+                           </span>
                         </div>
                      </div>
                   </div>
@@ -222,12 +238,14 @@ const ContactSection: React.FC = () => {
 
                     {/* Subject */}
                     <div className="md:col-span-2 space-y-1.5">
-                       <label htmlFor="subject" className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Interested Subject</label>
+                       <label htmlFor="subject" className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Interested Subject / Program</label>
                        <select id="subject" name="subject" className="w-full px-5 py-3.5 bg-white border border-slate-200 rounded-2xl focus:border-teal-500 outline-none transition-all font-bold text-slate-900 cursor-pointer">
-                          <option>GCE O-Level Physics</option>
+                          <option>GCE O-Level Physics (Pure / Combined)</option>
                           <option>A-Level H2 Physics</option>
                           <option>IB HL/SL Physics</option>
+                          <option>AEIS Mathematics</option>
                           <option>FIDE Chess Coaching</option>
+                          <option>West Branch (Beauty World) Classes</option>
                           <option>General Enquiry</option>
                        </select>
                     </div>

@@ -135,26 +135,53 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* 4. CONTACT */}
+          {/* 4. LOCATIONS & CONTACT */}
           <div>
             <h3 className="text-white font-bold text-lg mb-6 flex items-center gap-2">
               <span className="w-1.5 h-6 bg-teal-500 rounded-full"></span>
-              Contact Us
+              Locations & Contact
             </h3>
-            <div className="space-y-5">
+            <div className="space-y-4">
+              {/* Location 1: Main Center */}
               <div className="flex items-start gap-3 text-sm group">
                 <MapPin className="w-5 h-5 text-teal-500 shrink-0 mt-0.5" />
-                <span className="text-slate-400 group-hover:text-white transition-colors">
-                  186 Toa Payoh Central, Lobby H 02-430, Singapore 310186
-                </span>
+                <div>
+                  <p className="text-xs font-bold text-teal-400 uppercase tracking-wider">Main Center (Toa Payoh)</p>
+                  <p className="text-slate-400 group-hover:text-white transition-colors text-xs leading-relaxed mt-0.5">
+                    186 Toa Payoh Central, Lobby H 02-430, Singapore 310186
+                  </p>
+                </div>
               </div>
-              <div className="flex items-center gap-3 text-sm group">
-                <Phone className="w-5 h-5 text-teal-500 shrink-0" />
-                <a href="tel:+6597277419" className="text-slate-400 group-hover:text-white transition-colors">+65 9727 7419</a>
+
+              {/* Location 2: Beauty World */}
+              <div className="flex items-start gap-3 text-sm group">
+                <MapPin className="w-5 h-5 text-indigo-400 shrink-0 mt-0.5" />
+                <div>
+                  <p className="text-xs font-bold text-indigo-400 uppercase tracking-wider">West Branch (Beauty World)</p>
+                  <p className="text-slate-400 group-hover:text-white transition-colors text-xs leading-relaxed mt-0.5">
+                    Beauty World Shopping Centre, Upper Bukit Timah Road, Singapore
+                  </p>
+                  <span className="inline-block mt-1 text-[11px] font-semibold text-indigo-300 bg-indigo-950/60 border border-indigo-500/30 px-2 py-0.5 rounded">
+                    Physics & Chess Classes in the West
+                  </span>
+                </div>
               </div>
+
+              {/* Phone Contacts */}
+              <div className="flex items-start gap-3 text-sm group pt-1">
+                <Phone className="w-5 h-5 text-teal-500 shrink-0 mt-0.5" />
+                <div className="space-y-1 text-xs">
+                  <div>
+                    <span className="text-slate-500 block">Class Enquiries & WhatsApp:</span>
+                    <a href="tel:+6597277419" className="text-slate-300 hover:text-teal-400 font-semibold transition-colors">+65 9727 7419</a>
+                    </div>
+                </div>
+              </div>
+
+              {/* Email */}
               <div className="flex items-center gap-3 text-sm group">
                 <Mail className="w-5 h-5 text-teal-500 shrink-0" />
-                <a href="mailto:chewkm2001@yahoo.com" className="text-slate-400 group-hover:text-white transition-colors">chewkm2001@yahoo.com</a>
+                <a href="mailto:chewkm2001@yahoo.com" className="text-slate-400 group-hover:text-white transition-colors text-xs">chewkm2001@yahoo.com</a>
               </div>
             </div>
           </div>

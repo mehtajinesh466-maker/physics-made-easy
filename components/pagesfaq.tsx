@@ -15,6 +15,12 @@ const faqs = [
     theme: "blue"
   },
   {
+    question: "Do you conduct physical classes in the West of Singapore?",
+    answer: "Yes! In addition to our Central hub at Toa Payoh Central, Mr. Chew now conducts physical Physics & Chess classes in the West at Beauty World Shopping Centre (Upper Bukit Timah Road, directly accessible via Beauty World MRT). Contact us via WhatsApp (+65 9727 7419) for available slot timings.",
+    category: "Locations",
+    theme: "amber"
+  },
+  {
     question: "Can I join online if I'm too lazy to travel?",
     answer: "Affirmative. We have a high-res discord-style online setup. Live streams, digital whiteboards, and recordings available 24/7.",
     category: "Logistics",
@@ -159,36 +165,46 @@ const faqs = [
                 
                 <div className="absolute bottom-8 left-8 text-white">
                    <p className="font-bold text-2xl">Admissions Open</p>
-                   <p className="text-white/90">Session 2024-25</p>
+                   <p className="text-white/90">Academic Year 2026</p>
                 </div>
               </div>
 
               {/* Floating Card 1: Contact Support */}
-              <div className="absolute -bottom-6 -right-4 bg-white p-4 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-slate-100 flex items-center gap-4 animate-bounce-slow max-w-[200px]">
+              <a 
+                href="https://wa.me/6597277419" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="absolute -bottom-6 -right-4 bg-white p-4 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-slate-100 flex items-center gap-4 animate-bounce-slow max-w-[220px] hover:shadow-xl transition-all"
+              >
                 <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center text-green-600 shrink-0">
                   <Phone size={20} />
                 </div>
                 <div>
-                  <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Admission Desk</p>
-                  <p className="text-sm font-black text-slate-800">+91 98765 43210</p>
+                  <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Admissions Desk</p>
+                  <p className="text-sm font-black text-slate-800">+65 9727 7419</p>
                 </div>
-              </div>
+              </a>
 
               {/* Floating Card 2: Chat Bubble */}
-              <div className="absolute top-12 -left-8 bg-white p-4 pr-6 rounded-2xl rounded-tr-none shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-slate-100 animate-float hidden md:block">
+              <a 
+                href="https://wa.me/6597277419?text=Hi!%20I'm%20inquiring%20about%20Physics/Chess%20classes%20at%20Beauty%20World%20Shopping%20Centre."
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="absolute top-12 -left-8 bg-white p-4 pr-6 rounded-2xl rounded-tr-none shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-slate-100 animate-float hidden md:block hover:shadow-xl transition-all"
+              >
                 <div className="flex items-center gap-3">
                    <div className="w-10 h-10 bg-amber-100 rounded-full flex items-center justify-center text-amber-600">
                       <MessageCircle size={20} />
                    </div>
                    <div>
-                     <p className="font-bold text-slate-800 text-sm">Can't find answer?</p>
-                     <div className="flex items-center gap-1 text-xs text-amber-600 font-bold cursor-pointer hover:underline">
-                        <span>Chat with us</span>
+                     <p className="font-bold text-slate-800 text-xs">West Branch Classes?</p>
+                     <div className="flex items-center gap-1 text-xs text-amber-600 font-bold">
+                        <span>Chat on WhatsApp</span>
                         <ArrowRight size={12} />
                      </div>
                    </div>
                 </div>
-              </div>
+              </a>
 
               {/* Decorative Star */}
               <div className="absolute -top-6 right-6 text-yellow-400 rotate-12 animate-pulse">
