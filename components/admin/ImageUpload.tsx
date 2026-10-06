@@ -12,7 +12,7 @@ export default function ImageUpload({ value, onChange }: ImageUploadProps) {
   return (
     <div className="space-y-4">
       <CldUploadWidget
-        uploadPreset="physics" // Ensure this matches your Cloudinary settings
+        uploadPreset="ireland" // Ensure this matches your Cloudinary settings
         onSuccess={(result: any) => onChange(result.info.secure_url)}
       >
         {({ open }) => (
