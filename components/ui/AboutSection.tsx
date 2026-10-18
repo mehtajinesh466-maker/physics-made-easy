@@ -85,10 +85,10 @@ const AboutSection: React.FC = () => {
             {/* Description Text */}
             <div className="space-y-6 text-slate-600 text-lg leading-relaxed mb-6">
               <p>
-                Founded by <strong className="text-slate-900">Mr. Cornelius Chew</strong> (Ex-MOE Scholar), we are not just another tuition center. We fuse the academic rigor of Physics with the strategic discipline of International Chess.
+                Founded by <strong className="text-slate-900">Mr. Cornelius Chew</strong> (Ex-MOE PSC Scholar), we are not just another tuition center. Currently teaching first-year undergraduate Physics at <strong className="text-slate-900">Nanyang Technological University (NTU)</strong> and pursuing a Master&apos;s in Education (M.Ed.) from the <strong className="text-slate-900">University of the People (USA) certified by the International Baccalaureate (IB)</strong> in Geneva, Switzerland, Mr. Chew fuses the academic rigor of higher-level Physics with the strategic discipline of International Chess.
               </p>
               <p>
-                Using the <strong className="text-slate-900">Multiple Intelligences (MI)</strong> theory, we customize learning to fit your child's unique cognitive profile—whether they are "Number Smart," "Picture Smart," or "People Smart."
+                Using the <strong className="text-slate-900">Multiple Intelligences (MI)</strong> theory, we customize learning to fit your child&apos;s unique cognitive profile—whether they are &ldquo;Number Smart,&rdquo; &ldquo;Picture Smart,&rdquo; or &ldquo;People Smart.&rdquo;
               </p>
             </div>
 
@@ -106,14 +106,16 @@ const AboutSection: React.FC = () => {
             {/* Feature List */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
                {[
-                 "Ex-MOE & NIE Trained", 
-                 "FIDE Certified Instructors", 
-                 "Proven Track Record", 
-                 "Holistic Development"
+                 "NTU Undergraduate Physics Instructor",
+                 "IB-Certified M.Ed. (Geneva Framework)",
+                 "Ex-MOE & NIE Trained Scholar", 
+                 "FIDE Certified Chess Instructor", 
+                 "Proven Track Record (95% A/B)", 
+                 "Multiple Intelligences Pedagogy"
                ].map((item, idx) => (
                  <div key={idx} className="flex items-center gap-3">
                     <CheckCircle2 className="w-5 h-5 text-teal-500 shrink-0" />
-                    <span className="text-slate-700 font-medium">{item}</span>
+                    <span className="text-slate-700 font-medium text-sm">{item}</span>
                  </div>
                ))}
             </div>
@@ -141,8 +143,11 @@ const AboutSection: React.FC = () => {
                   <h4 className="text-lg font-bold text-slate-900">
                     Mr. Chew Kok Mun
                   </h4>
-                  <p className="text-sm font-medium text-teal-600">
-                    Founder & PSC Teaching Scholar
+                  <p className="text-sm font-semibold text-teal-600">
+                    Founder, PSC Scholar & NTU Physics Faculty
+                  </p>
+                  <p className="text-xs text-slate-500 font-medium">
+                    M.Ed. Candidate (IB-Certified, Geneva) • Ex-MOE & NIE
                   </p>
                 </div>
               </div>

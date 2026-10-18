@@ -69,7 +69,7 @@ export default function IBPhysicsCoursePage() {
 
   const schema = getCourseSchema({
     title: "IB Physics Tutor Singapore — HL & SL Specialist",
-    description: "IB Physics tuition in Singapore by ex-MOE scholar Mr. Chew. 95% Grade 7 HL track record. IA and Extended Essay mentorship. Small groups and 1-on-1.",
+    description: "IB Physics tuition in Singapore by Mr. Chew. Currently teaching 1st year undergraduate Physics at NTU and pursuing an IB-certified Master's in Education from University of the People (USA) certified by International Baccalaureate (Geneva). 95% Grade 7 HL track record.",
     level: "IB Diploma Programme (HL & SL)",
     url: "/courses/ib-physics",
     price: "0",
@@ -112,10 +112,16 @@ export default function IBPhysicsCoursePage() {
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-50 border border-cyan-200 text-cyan-700 text-xs font-bold uppercase tracking-widest mb-6 shadow-sm"
+            className="flex flex-wrap items-center justify-center gap-2 mb-6"
           >
-            <Sparkles size={12} className="fill-cyan-500" />
-            <span>95% Grade 7 HL Track Record</span>
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-50 border border-cyan-200 text-cyan-700 text-xs font-bold uppercase tracking-widest shadow-sm">
+              <Sparkles size={12} className="fill-cyan-500" />
+              <span>95% Grade 7 HL Track Record</span>
+            </div>
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-indigo-50 border border-indigo-200 text-indigo-700 text-xs font-bold uppercase tracking-widest shadow-sm">
+              <Award size={12} className="text-indigo-600" />
+              <span>IB-Certified M.Ed. (Geneva) • NTU Faculty</span>
+            </div>
           </motion.div>
 
           <motion.h1
@@ -136,7 +142,7 @@ export default function IBPhysicsCoursePage() {
             transition={{ delay: 0.1 }}
             className="text-slate-600 text-lg md:text-xl leading-relaxed max-w-3xl mx-auto mb-8 font-medium"
           >
-            The IB Physics program is highly demanding. IB HL Physics in particular requires students to think like physicists — performing calculations while constructing scientific arguments with rigor.
+            The IB Physics program is highly demanding. Taught by Mr. Chew — who is currently teaching first-year undergraduate Physics at NTU and pursuing an M.Ed. certified by the International Baccalaureate (headquartered in Geneva, Switzerland) — students master the analytical depth and conceptual rigor needed to secure a Grade 7.
           </motion.p>
 
           <div className="flex flex-wrap justify-center gap-6 text-sm text-slate-500 font-bold mb-8">
@@ -206,7 +212,7 @@ export default function IBPhysicsCoursePage() {
               Why IB Physics Is Different — And Why That Matters for Tuition
             </h2>
             <p className="text-slate-600 max-w-2xl mx-auto">
-              Most physics tuition centres are built around the local MOE syllabus. Mr. Chew's depth in IB Physics comes from years of teaching to this specific structure.
+              Most physics tuition centres are built purely around the local MOE syllabus. Mr. Chew's deep expertise in IB Physics is backed by active university teaching at NTU and an ongoing Master's in Education certified by the International Baccalaureate foundation in Geneva.
             </p>
           </div>
 

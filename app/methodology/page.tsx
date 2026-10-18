@@ -23,7 +23,9 @@ import {
   Home,
   ChevronRight,
   Atom,
-  Sparkles
+  Sparkles,
+  GraduationCap,
+  Globe
 } from "lucide-react";
 import { getFAQSchema } from "@/config/seo-config";
 import MissionStatement from "@/components/mission-statement";
@@ -367,25 +369,30 @@ export default function MethodologyPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
+              {
+                title: "NTU Physics Faculty",
+                desc: "Currently teaching 1st year undergraduate Physics at Nanyang Technological University (NTU), embedding university-level rigor.",
+                icon: GraduationCap
+              },
+              {
+                title: "IB-Certified M.Ed.",
+                desc: "Pursuing Master's in Education (UoPeople USA) certified by International Baccalaureate (Geneva, Switzerland).",
+                icon: Globe
+              },
               {
                 title: "Ex-MOE & NIE Trained",
                 desc: "PSC Teaching Scholar and NIE-trained educator with NUS Minors in Math and English Linguistics for precise communication.",
                 icon: Award
               },
               {
-                title: "International Chess Coach",
-                desc: "FIDE International Chess Instructor certificate with competitive experience at national schools level.",
-                icon: Compass
-              },
-              {
                 title: "20+ Years Track Record",
-                desc: "Over 1000+ students mentored. Audited 2001–2026 results: 95% O-Level A1/A2, 95% IB Grade 7, 80% A-Level H2 A/B.",
+                desc: "Over 1000+ students mentored. 95% O-Level A1/A2, 95% IB Grade 7, 80% A-Level H2 A/B, plus FIDE Chess coaching.",
                 icon: Users
               }
             ].map((card, i) => (
-              <div key={i} className="p-6 bg-slate-50 border border-slate-200 rounded-2xl shadow-sm text-center space-y-4">
+              <div key={i} className="p-6 bg-slate-50 border border-slate-200 rounded-2xl shadow-sm text-center space-y-4 hover:border-teal-300 hover:bg-white hover:shadow-md transition-all">
                 <div className="mx-auto w-12 h-12 rounded-full bg-teal-50 border border-teal-100 flex items-center justify-center text-teal-600">
                   <card.icon size={24} />
                 </div>

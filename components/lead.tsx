@@ -23,15 +23,23 @@ export default function LeadInstructorSection() {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Mr. Chew Kok Mun",
-    "jobTitle": "Lead Physics Instructor",
-    "description": "Ex-MOE Scholar, NIE-trained educator specializing in Physics, Math, and Chess strategy.",
-    "affiliation": {
-      "@type": "Organization",
-      "name": "Ministry of Education Singapore"
-    }
+    "jobTitle": "Lead Physics Instructor & NTU Undergraduate Physics Faculty",
+    "description": "Ex-MOE PSC Scholar, currently teaching first-year undergraduate Physics at Nanyang Technological University (NTU) and pursuing an IB-certified Master's in Education from University of the People (USA).",
+    "worksFor": [
+      {
+        "@type": "EducationalOrganization",
+        "name": "Physics Made Easy"
+      },
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "Nanyang Technological University (NTU)"
+      }
+    ]
   };
 
   const credentials = [
+    "Undergraduate Physics Instructor (NTU)",
+    "M.Ed. Candidate (IB-Certified, Geneva)",
     "Ex-MOE & NIE-trained Scholar",
     "NUS Math & English Minors",
     "Edinburgh Business School Cert",
@@ -82,17 +90,17 @@ export default function LeadInstructorSection() {
             <div className="relative rounded-[2.5rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.1)] border-[8px] border-white aspect-[4/5] z-10">
               <Image 
                 src="/chewsir.jpeg" 
-                alt="Mr. Chew Kok Mun - Physics Specialist & MOE Scholar" 
+                alt="Mr. Chew Kok Mun - NTU Physics Instructor & Ex-MOE Scholar" 
                 fill
                 className="object-cover transition-transform duration-1000 group-hover:scale-105"
                 sizes="(max-width: 768px) 100vw, 40vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent"></div>
               <div className="absolute bottom-8 left-8 text-white">
-                <h3 className="text-2xl font-black tracking-tight">Mr. Chew — Ex-MOE Scholar, Physics Tutor Singapore</h3>
+                <h3 className="text-2xl font-black tracking-tight">Mr. Chew — NTU Physics Instructor, Ex-MOE Scholar</h3>
                 <div className="flex items-center gap-2 mt-1">
                   <ShieldCheck size={16} className="text-teal-400" />
-                  <p className="text-xs font-bold text-teal-400 uppercase tracking-widest">PSC Teaching Scholar</p>
+                  <p className="text-xs font-bold text-teal-400 uppercase tracking-widest">PSC Scholar & NTU Faculty</p>
                 </div>
               </div>
             </div>
@@ -128,38 +136,62 @@ export default function LeadInstructorSection() {
             <motion.div variants={itemVariants} className="space-y-4 mb-8 text-center lg:text-left">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 text-slate-600 text-[10px] font-bold uppercase tracking-widest border border-slate-200">
                 <Star size={12} className="text-amber-500 fill-amber-500" />
-                Trusted by 1000+ Students
+                Trusted by 1000+ Students • Active NTU Faculty
               </div>
               <h2 className="text-4xl md:text-5xl font-black text-slate-900 leading-[1.1] tracking-tight">
-                A-Level Physics Tuition Singapore <br className="hidden md:block" />
+                A-Level & IB Physics Tuition Singapore <br className="hidden md:block" />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 via-indigo-600 to-purple-600">
                   — Rigorous, Strategic, Proven
                 </span>
               </h2>
               <p className="text-slate-600 text-lg md:text-xl leading-relaxed max-w-2xl">
-                Master the <strong>Physics syllabus</strong> and <strong>Chess strategy</strong> with a mentor who bridges the gap between scientific logic and creative expression.
+                Master the <strong>Physics syllabus</strong> and <strong>analytical logic</strong> with an educator currently teaching <strong>first-year undergraduate Physics at NTU</strong> and pursuing an <strong>IB-certified Master&apos;s in Education</strong> (University of the People, USA).
               </p>
             </motion.div>
 
-            {/* The "Edge" Action Cards */}
+            {/* The "Edge" Action Cards (2x2 Grid) */}
             <motion.div variants={itemVariants} className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
+              {/* Card 1: NTU University Teaching */}
+              <div className="group p-6 rounded-3xl bg-slate-50 border border-transparent hover:border-teal-200 hover:bg-white hover:shadow-xl transition-all duration-300">
+                <div className="w-12 h-12 bg-teal-100 text-teal-700 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <Award size={24} />
+                </div>
+                <h4 className="font-bold text-slate-900 text-lg mb-2">University Rigor (NTU)</h4>
+                <p className="text-sm text-slate-500 leading-relaxed">
+                  Currently teaching <span className="text-slate-900 font-semibold">1st year undergraduate Physics at NTU</span>, infusing high-level problem-solving standards.
+                </p>
+              </div>
+
+              {/* Card 2: IB Geneva Pedagogy */}
+              <div className="group p-6 rounded-3xl bg-slate-50 border border-transparent hover:border-indigo-200 hover:bg-white hover:shadow-xl transition-all duration-300">
+                <div className="w-12 h-12 bg-indigo-100 text-indigo-700 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <Globe size={24} />
+                </div>
+                <h4 className="font-bold text-slate-900 text-lg mb-2">IB-Certified Pedagogy</h4>
+                <p className="text-sm text-slate-500 leading-relaxed">
+                  Pursuing <span className="text-slate-900 font-semibold">M.Ed. (UoPeople USA)</span> certified by the <span className="text-slate-900 font-semibold">International Baccalaureate (Geneva)</span>.
+                </p>
+              </div>
+
+              {/* Card 3: NUS Minors */}
               <div className="group p-6 rounded-3xl bg-slate-50 border border-transparent hover:border-teal-200 hover:bg-white hover:shadow-xl transition-all duration-300">
                 <div className="w-12 h-12 bg-teal-100 text-teal-700 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                   <MessageSquare size={24} />
                 </div>
                 <h4 className="font-bold text-slate-900 text-lg mb-2">Communication Edge</h4>
                 <p className="text-sm text-slate-500 leading-relaxed">
-                  Minors in <span className="text-slate-900 font-semibold">Math & English (NUS)</span> allow for precise explanation of the most abstract physics concepts.
+                  Minors in <span className="text-slate-900 font-semibold">Math & English (NUS)</span> allow for crystal-clear explanation of abstract concepts.
                 </p>
               </div>
 
+              {/* Card 4: Edinburgh & Logic */}
               <div className="group p-6 rounded-3xl bg-slate-50 border border-transparent hover:border-indigo-200 hover:bg-white hover:shadow-xl transition-all duration-300">
                 <div className="w-12 h-12 bg-indigo-100 text-indigo-700 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                   <Calculator size={24} />
                 </div>
-                <h4 className="font-bold text-slate-900 text-lg mb-2">Practical Logic</h4>
+                <h4 className="font-bold text-slate-900 text-lg mb-2">Applied Strategy</h4>
                 <p className="text-sm text-slate-500 leading-relaxed">
-                  Post-Graduate certifications from <span className="text-slate-900 font-semibold">Edinburgh</span> ensure students develop real-world problem-solving skills.
+                  <span className="text-slate-900 font-semibold">Edinburgh Master&apos;s</span> and FIDE Chess coaching ensure real-world problem-solving and foresight.
                 </p>
               </div>
             </motion.div>

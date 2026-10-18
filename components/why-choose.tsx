@@ -40,10 +40,10 @@ export default function WhyChooseUsSection() {
   const benefits = [
     {
       title: "Cross-Domain Pedagogy",
-      description: "Led by Mr. Chew (Ex-MOE Scholar, NIE-Trained). We bridge Physics, Mathematics, and Logic to create versatile learners.",
+      description: "Led by Mr. Chew (NTU Physics Faculty, Ex-MOE Scholar, IB-Certified M.Ed. Candidate). We bridge higher-level Physics, Mathematics, and Logic to create versatile learners.",
       icon: <BookOpenCheck className="w-6 h-6 text-teal-600" />,
       color: "teal",
-      keywords: "MOE Scholar, NIE Trained, STEM Education"
+      keywords: "NTU Faculty, IB Certified, MOE Scholar, NIE Trained, STEM Education"
     },
     {
       title: "Cognitive MI Theory",

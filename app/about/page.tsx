@@ -3,6 +3,7 @@ import AboutBanner from "@/components/ui/AboutBanner";
 
 export const metadata = buildMetadata("/about");
 import AboutSection from "@/components/ui/AboutSection";
+import TeachingExperienceSection from "@/components/ui/teaching-experience";
 import FaqSection from "@/components/stats-section";
 import CoachCtaSection from "@/components/ui/CoachCtaSection";
 import TestimonialsSection from "@/components/testimonials-section";
@@ -16,14 +17,25 @@ export default function AboutPage() {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Mr. Chew Kok Mun",
-    "jobTitle": "Lead Physics Instructor & Founder",
-    "worksFor": {
-      "@type": "EducationalOrganization",
-      "name": "Physics Made Easy",
-      "sameAs": "https://www.makephysicseasy.com"
-    },
-    "description": "Ex-MOE PSC Scholar, NIE-trained physics educator with NUS Mathematics & English minors and Edinburgh Business School Master's degree.",
+    "jobTitle": "Lead Physics Instructor, NTU Undergraduate Physics Instructor & Founder",
+    "worksFor": [
+      {
+        "@type": "EducationalOrganization",
+        "name": "Physics Made Easy",
+        "sameAs": "https://www.makephysicseasy.com"
+      },
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "Nanyang Technological University (NTU)",
+        "sameAs": "https://www.ntu.edu.sg"
+      }
+    ],
+    "description": "Ex-MOE PSC Scholar, NIE-trained physics educator currently teaching first-year undergraduate Physics at Nanyang Technological University (NTU) and pursuing a Master's in Education (M.Ed.) from the University of the People (USA) certified by the International Baccalaureate (headquartered in Geneva, Switzerland), with NUS Mathematics & English minors and Edinburgh Business School Master's degree.",
     "alumniOf": [
+      {
+        "@type": "EducationalOrganization",
+        "name": "University of the People (USA) - Master of Education (IB Certified)"
+      },
       {
         "@type": "EducationalOrganization",
         "name": "National University of Singapore (NUS)"
@@ -39,14 +51,16 @@ export default function AboutPage() {
     ],
     "award": [
       "MOE PSC Teaching Scholarship",
+      "International Baccalaureate (IB) Educator Certification",
       "FIDE International Chess Instructor Certification",
       "Ex-MOE Senior Physics Educator Recognition"
     ],
     "knowsAbout": [
+      "Undergraduate Physics (NTU)",
       "Physics Pedagogy",
+      "International Baccalaureate (IB) HL & SL Physics",
       "GCE O-Level Physics",
       "GCE A-Level H2 Physics",
-      "IB Physics HL & SL",
       "Multiple Intelligences Teaching Methodology"
     ]
   };
@@ -59,6 +73,7 @@ export default function AboutPage() {
       />
       <AboutBanner />
       <AboutSection />
+      <TeachingExperienceSection />
       <AchievementsSection />
       <TeamSection />
       <CoachCtaSection />
@@ -68,3 +83,4 @@ export default function AboutPage() {
     </div>
   );
 }
+

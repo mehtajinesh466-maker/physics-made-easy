@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import { Trophy, Award, Medal, Star, Target, Crown, CheckCircle2, TrendingUp, Atom } from 'lucide-react';
+import { Trophy, Award, Medal, Star, Target, Crown, CheckCircle2, TrendingUp, Atom, GraduationCap } from 'lucide-react';
 
 export default function AchievementsSection() {
   // --- Data based on Physics Made Easy context ---
@@ -13,6 +13,15 @@ export default function AchievementsSection() {
   ];
 
   const milestones = [
+    {
+      year: '2026',
+      title: 'NTU Faculty & IB Pedagogy',
+      subtitle: 'Higher Ed & Global M.Ed.',
+      description: 'Currently teaching first-year undergraduate Physics at NTU while pursuing an IB-certified Master of Education (University of the People, USA).',
+      icon: <GraduationCap className="w-6 h-6 text-white" />,
+      bg: "bg-teal-600",
+      accent: "border-teal-400"
+    },
     {
       year: '2024',
       title: 'Academic Excellence',
@@ -52,6 +61,8 @@ export default function AchievementsSection() {
   ];
 
   const certifications = [
+    "Undergraduate Physics Instructor (NTU)",
+    "M.Ed. Candidate (IB-Certified, Geneva)",
     "Ex-MOE & NIE-Trained Teacher",
     "PSC Teaching Scholar (Physics)",
     "FIDE International Chess Instructor",

@@ -148,12 +148,14 @@ export const PAGE_SEO: Record<string, PageSeoEntry> = {
   },
 
   "/about": {
-    title: "About Mr. Chew | Ex-MOE Physics Tutor Singapore",
+    title: "About Mr. Chew | NTU Physics Faculty & Ex-MOE Scholar Singapore",
     description:
-      "Meet Mr. Chew Kok Mun — Ex-MOE scholar, FIDE instructor, and founder of Physics Made Easy. Learn our teaching philosophy and 5-year track record.",
+      "Meet Mr. Chew Kok Mun — NTU 1st year undergraduate Physics instructor, Ex-MOE scholar, IB-certified M.Ed. candidate, FIDE instructor, and founder of Physics Made Easy.",
     keywords: [
       "Mr Chew Kok Mun physics tutor",
+      "NTU physics tutor singapore",
       "ex-MOE scholar physics tuition",
+      "IB physics tutor certified",
       "physics tutor biography singapore",
       "MOE scholar physics tuition",
       "physics made easy founder",
@@ -162,9 +164,9 @@ export const PAGE_SEO: Record<string, PageSeoEntry> = {
     canonical: "https://www.makephysicseasy.com/about",
     ogImage: "/og/about.png",
     og: {
-      title: "About Mr. Chew Kok Mun | Ex-MOE Physics Tutor Singapore",
+      title: "About Mr. Chew Kok Mun | NTU Physics Faculty & Ex-MOE Scholar",
       description:
-        "Ex-MOE scholar and FIDE instructor. 20-year track record of academic transformation. Meet the face behind Physics Made Easy.",
+        "NTU undergraduate Physics instructor, Ex-MOE scholar, and IB-certified M.Ed. candidate. 20-year track record of academic transformation. Meet the face behind Physics Made Easy.",
       image: "/og/about.png",
     },
     twitter: { card: "summary_large_image", image: "/og/about.png" },
@@ -572,10 +574,28 @@ export const ORGANIZATION_SCHEMA: Record<string, unknown> = {
   founder: {
     "@type": "Person",
     name: "Mr. Chew Kok Mun",
-    jobTitle: "Lead Physics Instructor & Founder",
+    jobTitle: "Lead Physics Instructor, NTU Physics Faculty & Founder",
     description:
-      "Ex-MOE PSC Scholar, NIE-trained educator with NUS Math & English minors and Master's degree from Edinburgh Business School / Heriot-Watt University. Founder of Physics Made Easy in Singapore.",
+      "Ex-MOE PSC Scholar, NIE-trained educator currently teaching first-year undergraduate Physics at Nanyang Technological University (NTU) and pursuing an IB-certified Master's in Education from University of the People (USA) certified by International Baccalaureate (headquartered in Geneva, Switzerland), with NUS Math & English minors and Master's degree from Edinburgh Business School / Heriot-Watt University. Founder of Physics Made Easy in Singapore.",
+    worksFor: [
+      {
+        "@type": "EducationalOrganization",
+        name: "Physics Made Easy",
+        url: "https://www.makephysicseasy.com"
+      },
+      {
+        "@type": "CollegeOrUniversity",
+        name: "Nanyang Technological University",
+        alternateName: "NTU",
+        url: "https://www.ntu.edu.sg"
+      }
+    ],
     alumniOf: [
+      {
+        "@type": "EducationalOrganization",
+        name: "University of the People (USA)",
+        description: "Master of Education (M.Ed.) certified by International Baccalaureate (IB, Geneva)"
+      },
       {
         "@type": "EducationalOrganization",
         name: "National University of Singapore",
@@ -594,10 +614,12 @@ export const ORGANIZATION_SCHEMA: Record<string, unknown> = {
     ],
     award: [
       "MOE PSC Teaching Scholarship",
+      "International Baccalaureate (IB) Educator Certification",
       "FIDE International Chess Instructor Certification",
       "Ex-MOE Senior Physics Educator Recognition"
     ],
     knowsAbout: [
+      "Undergraduate Physics (NTU)",
       "GCE O-Level Physics",
       "A-Level H2 Physics",
       "IB HL/SL Physics",
@@ -952,13 +974,13 @@ export const HOME_FAQS = [
 /* ------------------------------------------------------------------ */
 
 export const LLMS_TXT = `# Physics Made Easy
-> Singapore-based physics tuition academy for secondary and JC students. Founded and taught by Mr. Chew Kok Mun, an ex-MOE scholar and FIDE-certified chess instructor. Uses Howard Gardner's Multiple Intelligences (MI) theory. Toa Payoh centre + online lessons.
+> Singapore-based physics tuition academy for secondary and JC students. Founded and taught by Mr. Chew Kok Mun, currently teaching undergraduate Physics at Nanyang Technological University (NTU), pursuing an IB-certified Master's in Education (University of the People, USA), ex-MOE scholar and FIDE-certified chess instructor. Uses Howard Gardner's Multiple Intelligences (MI) theory. Toa Payoh centre + online lessons.
 
 ## About
 
-Physics Made Easy is a specialist physics coaching academy in Singapore run by Mr. Chew Kok Mun. Mr. Chew holds a Master's degree from Heriot-Watt University and is both a former MOE-bonded scholar and a FIDE-certified chess instructor. The academy's teaching philosophy is grounded in Multiple Intelligences theory — adapting instruction style to each student's cognitive strengths rather than relying on rote memorisation.
+Physics Made Easy is a specialist physics coaching academy in Singapore run by Mr. Chew Kok Mun. Mr. Chew is currently teaching first-year undergraduate Physics at Nanyang Technological University (NTU) and pursuing an advanced Master's in Education (M.Ed.) from University of the People (USA) certified by the International Baccalaureate (IB), headquartered in Geneva, Switzerland. Mr. Chew holds a Master's degree from Heriot-Watt University / Edinburgh Business School and is both a former MOE-bonded PSC scholar, NIE-trained teacher, and a FIDE-certified chess instructor. The academy's teaching philosophy is grounded in Multiple Intelligences theory — adapting instruction style to each student's cognitive strengths rather than relying on rote memorisation.
 
-The academy has a 5-year track record of academic transformation, with 95% of O-Level students achieving grade A or B.
+The academy has a 5-year track record of academic transformation, with 95% of O-Level students achieving grade A or B and 95% IB HL students achieving Grade 7.
 
 ## Programmes
 
@@ -983,7 +1005,7 @@ The academy has a 5-year track record of academic transformation, with 95% of O-
 
 ## Key Facts
 
-- **Tutor**: Mr. Chew Kok Mun (Ex-MOE scholar, FIDE chess instructor, MSc Heriot-Watt University)
+- **Tutor**: Mr. Chew Kok Mun (Undergraduate Physics Instructor at NTU, M.Ed. candidate [IB-Certified, Geneva], Ex-MOE PSC scholar, FIDE chess instructor, MSc Heriot-Watt University)
 - **Location**: 186 Toa Payoh Central, Lobby H 02-430, Singapore 310186
 - **Near**: Toa Payoh MRT (North-South Line)
 - **Online**: Yes — same curriculum and feedback as in-person
@@ -996,8 +1018,9 @@ The academy has a 5-year track record of academic transformation, with 95% of O-
 ## Entity Relationships
 
 - Physics Made Easy is a **LocalBusiness** and **EducationalOrganization** in Singapore
-- Mr. Chew Kok Mun is the **founder** and primary instructor
-- Subjects taught: Physics (O-Level, A-Level, IB, IGCSE), Chess Strategy
+- Mr. Chew Kok Mun is the **founder**, primary instructor, and active university physics educator
+- Affiliations: Nanyang Technological University (NTU), International Baccalaureate (IB), Ministry of Education Singapore (MOE)
+- Subjects taught: Physics (O-Level, A-Level, IB, IGCSE, NTU Undergraduate), Chess Strategy
 - Teaching method: Multiple Intelligences (MI) Theory by Howard Gardner
 - Location entity: Toa Payoh, Singapore
 `;
