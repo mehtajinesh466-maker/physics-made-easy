@@ -146,14 +146,28 @@ export default function Footer() {
               <div className="flex items-start gap-3 text-sm group">
                 <MapPin className="w-5 h-5 text-teal-500 shrink-0 mt-0.5" />
                 <div>
-                  <p className="text-xs font-bold text-teal-400 uppercase tracking-wider">Main Center (Toa Payoh)</p>
+                  <p className="text-xs font-bold text-teal-400 uppercase tracking-wider">Main Centre (Toa Payoh)</p>
                   <p className="text-slate-400 group-hover:text-white transition-colors text-xs leading-relaxed mt-0.5">
-                    186 Toa Payoh Central, Lobby H 02-430, Singapore 310186
+                    185 Toa Payoh Central, Lift E, Blk, Toa Payoh Central, #02-342, Singapore 310185
                   </p>
                 </div>
               </div>
 
-              {/* Location 2: Beauty World */}
+              {/* Location 2: Wednesday Lessons Only */}
+              <div className="flex items-start gap-3 text-sm group">
+                <MapPin className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
+                <div>
+                  <p className="text-xs font-bold text-amber-400 uppercase tracking-wider">Toa Payoh Central (Wednesdays Only)</p>
+                  <p className="text-slate-400 group-hover:text-white transition-colors text-xs leading-relaxed mt-0.5">
+                    186 Toa Payoh Central, Lobby H 02-430, Singapore 310186
+                  </p>
+                  <span className="inline-block mt-1 text-[11px] font-semibold text-amber-300 bg-amber-950/60 border border-amber-500/30 px-2 py-0.5 rounded">
+                    Lessons on Wednesdays Only
+                  </span>
+                </div>
+              </div>
+
+              {/* Location 3: Beauty World */}
               <div className="flex items-start gap-3 text-sm group">
                 <MapPin className="w-5 h-5 text-indigo-400 shrink-0 mt-0.5" />
                 <div>

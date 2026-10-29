@@ -52,7 +52,7 @@ const faqs = [
   },
   {
     question: "Is the tuition based at Toa Payoh or online?",
-    answer: "We are based at Toa Payoh Central. Online synchronous lessons (live, interactive, not recorded) are available for students who cannot commute. The teaching quality is identical."
+    answer: "We are based at Toa Payoh Central — our main centre is located at 185 Toa Payoh Central, Lift E, Blk, Toa Payoh Central, #02-342, Singapore 310185, with lessons at 186 Toa Payoh Central, Lobby H 02-430 held on Wednesdays only. Online synchronous lessons (live, interactive, not recorded) are also available for students who cannot commute. The teaching quality is identical."
   },
   {
     question: "How many students are in each class?",
@@ -195,8 +195,11 @@ export default function OLevelCoursePage() {
           </div>
           <div className="space-y-2">
             <span className="text-xs font-bold text-slate-400 uppercase">Physical Location</span>
-            <p className="text-base font-bold text-slate-900">186 Toa Payoh Central</p>
-            <p className="text-slate-500 text-xs leading-relaxed">Lobby H #02-430, Singapore 310186. Near MRT station.</p>
+            <p className="text-base font-bold text-slate-900">Toa Payoh Central</p>
+            <p className="text-slate-500 text-xs leading-relaxed">
+              Main Centre: 185 Toa Payoh Central, Lift E, Blk, Toa Payoh Central, #02-342, S(310185).<br />
+              (Lessons at 186 Toa Payoh Central, Lobby H 02-430, S(310186) on Wednesdays only).
+            </p>
           </div>
           <div className="space-y-2">
             <span className="text-xs font-bold text-slate-400 uppercase">Class Intake</span>

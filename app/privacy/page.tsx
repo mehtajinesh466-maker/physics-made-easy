@@ -177,7 +177,7 @@ export default function PrivacyPolicy() {
                       <div className="p-3 bg-white shadow-sm rounded-xl text-teal-600 border border-slate-100"><MapPin size={24}/></div>
                       <div>
                         <p className="text-xs font-black text-slate-400 uppercase tracking-widest">Office Address</p>
-                        <p className="font-bold text-slate-900">186 Toa Payoh Central, Lobby H 02-430, Singapore 310186</p>
+                        <p className="font-bold text-slate-900">185 Toa Payoh Central, Lift E, Blk, Toa Payoh Central, #02-342, Singapore 310185</p>
                       </div>
                     </div>
 

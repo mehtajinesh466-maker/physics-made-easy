@@ -33,9 +33,9 @@ const ContactSection: React.FC = () => {
     "telephone": "+6597277419",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "186 Toa Payoh Central, Lobby H 02-430",
+      "streetAddress": "185 Toa Payoh Central, Lift E, Blk, Toa Payoh Central, #02-342",
       "addressLocality": "Toa Payoh",
-      "postalCode": "310186",
+      "postalCode": "310185",
       "addressCountry": "SG"
     },
     "openingHoursSpecification": {
@@ -140,14 +140,30 @@ const ContactSection: React.FC = () => {
                            <MapPin className="w-5 h-5 text-teal-400" />
                         </div>
                         <div>
-                           <p className="text-[10px] font-black text-teal-400 uppercase tracking-widest mb-0.5">Central Hub (Toa Payoh)</p>
+                           <p className="text-[10px] font-black text-teal-400 uppercase tracking-widest mb-0.5">Main Centre (Toa Payoh)</p>
                            <p className="text-sm font-bold text-slate-300 leading-snug">
-                              186 Toa Payoh Central, <br /> Lobby H 02-430, Singapore 310186
+                              185 Toa Payoh Central, <br /> Lift E, Blk, Toa Payoh Central, #02-342, Singapore 310185
                            </p>
                         </div>
                      </div>
 
-                     {/* Location 2: Beauty World */}
+                     {/* Location 2: Wednesday Lessons Only */}
+                     <div className="flex items-start gap-5 group">
+                        <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center shrink-0 mt-1">
+                           <MapPin className="w-5 h-5 text-amber-400" />
+                        </div>
+                        <div>
+                           <p className="text-[10px] font-black text-amber-400 uppercase tracking-widest mb-0.5">Toa Payoh Central (Wednesdays Only)</p>
+                           <p className="text-sm font-bold text-slate-300 leading-snug">
+                              186 Toa Payoh Central, <br /> Lobby H 02-430, Singapore 310186
+                           </p>
+                           <span className="inline-block mt-1.5 text-[11px] font-bold text-amber-300 bg-amber-500/20 border border-amber-500/30 px-2 py-0.5 rounded">
+                              Lessons strictly on Wednesdays only
+                           </span>
+                        </div>
+                     </div>
+
+                     {/* Location 3: Beauty World */}
                      <div className="flex items-start gap-5 group">
                         <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center shrink-0 mt-1">
                            <MapPin className="w-5 h-5 text-indigo-400" />
@@ -245,6 +261,8 @@ const ContactSection: React.FC = () => {
                           <option>IB HL/SL Physics</option>
                           <option>AEIS Mathematics</option>
                           <option>FIDE Chess Coaching</option>
+                          <option>Main Centre (Toa Payoh) Classes</option>
+                          <option>Toa Payoh Wednesday Lessons</option>
                           <option>West Branch (Beauty World) Classes</option>
                           <option>General Enquiry</option>
                        </select>

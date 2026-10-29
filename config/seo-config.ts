@@ -533,10 +533,10 @@ export const ORGANIZATION_SCHEMA: Record<string, unknown> = {
   // Matches the page address shown on the website
   address: {
     "@type": "PostalAddress",
-    streetAddress: "186 Toa Payoh Central, Lobby H 02-430",
+    streetAddress: "185 Toa Payoh Central, Lift E, Blk, Toa Payoh Central, #02-342",
     addressLocality: "Toa Payoh",
     addressRegion: "Singapore",
-    postalCode: "310186",
+    postalCode: "310185",
     addressCountry: "SG",
   },
   geo: {
@@ -544,7 +544,7 @@ export const ORGANIZATION_SCHEMA: Record<string, unknown> = {
     latitude: 1.3343,
     longitude: 103.8480,
   },
-  hasMap: "https://maps.google.com/?q=186+Toa+Payoh+Central+Singapore+310186",
+  hasMap: "https://maps.google.com/?q=185+Toa+Payoh+Central+Singapore+310185",
   telephone: "+65-9727-7419",
   contactPoint: [
     {
@@ -780,9 +780,9 @@ export function getCourseSchema(course: {
   },
   address: { 
           "@type": "PostalAddress",
-          streetAddress: "186 Toa Payoh Central, Lobby H 02-430",
+          streetAddress: "185 Toa Payoh Central, Lift E, Blk, Toa Payoh Central, #02-342",
           addressLocality: "Singapore",
-          postalCode: "310186",
+          postalCode: "310185",
           addressCountry: "SG",
         },
       },
@@ -934,7 +934,7 @@ export const HOME_FAQS = [
   {
     question: "Where are classes held? Do you offer online tuition?",
     answer:
-      "In-person classes run at our Toa Payoh Central centre at 186 Toa Payoh Central, Lobby H 02-430, Singapore 310186. We also offer online lessons for students who prefer learning from home or are based overseas — same structured curriculum and feedback.",
+      "In-person classes run at our Toa Payoh Central main centre at 185 Toa Payoh Central, Lift E, Blk, Toa Payoh Central, #02-342, Singapore 310185. We also conduct lessons at 186 Toa Payoh Central, Lobby H 02-430, Singapore 310186 on Wednesdays only, and at our West Branch (Beauty World Shopping Centre). We also offer online lessons for students who prefer learning from home or are based overseas — same structured curriculum and feedback.",
   },
   {
     question: "How does chess coaching help with Physics?",
@@ -955,7 +955,7 @@ export const HOME_FAQS = [
   {
     question: "Is Physics Made Easy located near an MRT station?",
     answer:
-      "Yes, our centre is at 186 Toa Payoh Central, Lobby H 02-430, Singapore 310186 — a short walk from Toa Payoh MRT station on the North-South Line.",
+      "Yes, our main centre is at 185 Toa Payoh Central, Lift E, Blk, Toa Payoh Central, #02-342, Singapore 310185, and lessons at 186 Toa Payoh Central, Lobby H 02-430, Singapore 310186 (Wednesdays only) are both just a short walk from Toa Payoh MRT station on the North-South Line.",
   },
   // Added: addresses the chess + physics brand differentiator in search
   {
@@ -1006,7 +1006,7 @@ The academy has a 5-year track record of academic transformation, with 95% of O-
 ## Key Facts
 
 - **Tutor**: Mr. Chew Kok Mun (Undergraduate Physics Instructor at NTU, M.Ed. candidate [IB-Certified, Geneva], Ex-MOE PSC scholar, FIDE chess instructor, MSc Heriot-Watt University)
-- **Location**: 186 Toa Payoh Central, Lobby H 02-430, Singapore 310186
+- **Location**: Main Centre: 185 Toa Payoh Central, Lift E, Blk, Toa Payoh Central, #02-342, Singapore 310185 (Wednesday lessons: 186 Toa Payoh Central, Lobby H 02-430, Singapore 310186 — Wednesdays only; West Branch at Beauty World Shopping Centre)
 - **Near**: Toa Payoh MRT (North-South Line)
 - **Online**: Yes — same curriculum and feedback as in-person
 - **Syllabuses**: GCE O-Level, A-Level H2, IB HL/SL, IP, IGCSE Physics

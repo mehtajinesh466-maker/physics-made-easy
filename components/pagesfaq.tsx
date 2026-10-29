@@ -16,7 +16,7 @@ const faqs = [
   },
   {
     question: "Do you conduct physical classes in the West of Singapore?",
-    answer: "Yes! In addition to our Central hub at Toa Payoh Central, Mr. Chew now conducts physical Physics & Chess classes in the West at Beauty World Shopping Centre (Upper Bukit Timah Road, directly accessible via Beauty World MRT). Contact us via WhatsApp (+65 9727 7419) for available slot timings.",
+    answer: "Yes! In addition to our Central hub at Toa Payoh Central (Main Centre at 185 Toa Payoh Central, Lift E, Blk, Toa Payoh Central, #02-342, and Wednesday lessons at 186 Toa Payoh Central, Lobby H 02-430), Mr. Chew now conducts physical Physics & Chess classes in the West at Beauty World Shopping Centre (Upper Bukit Timah Road, directly accessible via Beauty World MRT). Contact us via WhatsApp (+65 9727 7419) for available slot timings.",
     category: "Locations",
     theme: "amber"
   },
